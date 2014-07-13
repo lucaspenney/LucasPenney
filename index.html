@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Lucas Penney</title>
+  <meta name="description" content="Portfolio website of Lucas Penney">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bower_components/angular-motion/dist/angular-motion.min.css">
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8545012-13']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body class='fade-in'>
+    <div class="navigation" role="navigation" ng-controller="navController">
+      <div class="nav-container">
+          <ul class="navigation-list">
+            <li ng-repeat='item in navLinks'>
+            <a href='{{item.link}}'><i class="fa fa-fw smalltext" ng-class="item.icon"></i> {{item.name}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+    <div class="content">
+      <ng-view class="fade"></ng-view>
+    </div>
+
+    <div class='footer' ng-controller="footerController">
+        &copy; 2014 Lucas Penney All Rights Reserved
+    </div>
+      <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="/bower_components/angular-route/angular-route.min.js"></script>
+      <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+      <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+      <script src="/bower_components/angular-strap/dist/angular-strap.min.js"></script>
+      <script src="/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+      <script src="/app/app.js"></script>
+    </body>
+  </html>

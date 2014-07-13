@@ -1,0 +1,31 @@
+<h1> Card Database </h1>
+
+<div class="well half pull-left margined text-centered">
+	<div class="database-searchpreviewback centered">
+	<img ng-if="selectedResult" class='database-searchpreview' src="http://manastack.com/cards/images/{{selectedResult.set}}/{{selectedResult.num}}.jpg"/>
+	</div>
+	<select size='10' class='database-searchresults'>
+	<option value="$index" ng-if="searchResults" ng-click="selectResult(card, $event)" ng-repeat="card in searchResults track by $index" ng-bind-html="card.name + ' (' + card.set + ')'"></option>
+	</select>
+	</div>
+</div>
+
+<div class="well half pull-left margined database-form">
+	<h2> Search </h2>
+	Name: <input value='' ng-model="search.name" ng-keyup="cardSearch($event)" type="text" class="" placeholder="Ajani"/>
+	Card Type:<input value='' ng-model="search.type" ng-keyup="cardSearch($event)" type="text" class="" placeholder="Creature"/>
+	Card Text:<input value='' ng-model="search.text" ng-keyup="cardSearch($event)" type="text" class="" placeholder="Counter target spell"/>
+	Sets: <input value='' ng-model="search.sets" ng-keyup="cardSearch($event)" type="text" class="" placeholder="M13 JOU"/>
+
+	Colors:<br> 
+	<i class="manasymbol-white"></i><input type="checkbox" ng-click="cardSearch($event)" ng-model="searchmana.w" ng-false-value="" ng-true-value="w"/>
+	<i class="manasymbol-blue"></i><input type="checkbox" ng-click="cardSearch($event)" ng-model="searchmana.u" ng-false-value="" ng-true-value="u"/>
+	<i class="manasymbol-black"></i><input type="checkbox" ng-click="cardSearch($event)" ng-model="searchmana.b" ng-false-value="" ng-true-value="b"/>
+	<i class="manasymbol-red"></i><input type="checkbox" ng-click="cardSearch($event)" ng-model="searchmana.r" ng-false-value="" ng-true-value="r"/>
+	<i class="manasymbol-green"></i><input type="checkbox" ng-click="cardSearch($event)" ng-model="searchmana.g" ng-false-value="" ng-true-value="g"/>
+</div>
+
+<div ng-if="selectedResult" class="well half pull-left margined">
+<h2 ng-bind-html="selectedResult.name"></h2>
+<p ng-bind-html="selectedResult.text"></p>
+</div>

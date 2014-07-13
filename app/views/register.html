@@ -1,0 +1,25 @@
+
+<div class="register-box well">
+<h2>Register</h2>
+	Enter your beta key below to create your account. </p>
+<div class="form-horizontal">
+  <p> <input placeholder="Enter Your Beta Key" style="text-align:center;width:280px;" type="text" ng-model="key"><br><br>
+  <a ng-show="!validKey" ng-click="validateKey()" class="btn btn-info">Submit</a> </p>
+<p ng-show="validationError" class='alert alert-error'>{{validationError}}</p>
+</div>
+<div ng-show="validKey">
+<p>Your key is valid! Please complete your registration.</p>
+
+
+<div class="register-form fade-in">
+<input type="text" ng-model="user.email" placeholder="Email Address">
+<input type="text" ng-model="user.username" placeholder="Username">
+<input type="password" ng-model="user.password" placeholder="Password">
+<br><br>
+<a ng-click="registerSubmit()" class="btn btn-info">Register</a>
+<br><br>
+<p ng-show="registerError" class='alert alert-error fade-in'>{{registerError}}</p>
+<p ng-show="registerSuccess" class='alert alert-success fade-in'>{{registerSuccess}}</p>
+</div>
+
+</div>

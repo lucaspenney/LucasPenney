@@ -1,0 +1,65 @@
+<div id="deckbuilder">
+	<a style="position:absolute;top:10px;left:1035px;" class="fa fa-lg fa-question" ng-click="helpModal()"></a>
+	<input type="hidden" id="deckid" value="{{deckid}}"/>
+	<div id="search">
+		<select id="searchselect" size='5'></select>
+		<input type="text" class="name" placeholder="Card Name"/>
+		<input type="text" class="type" placeholder="Card Type"/>
+		<input type="text" class="text" placeholder="Card Text"/>
+		<input type="text" class="sets" placeholder="Sets"/>
+	<div class="search-colors">
+	<i class="manasymbol-white"></i><input type="checkbox" class="w" />
+	<i class="manasymbol-blue"></i><input type="checkbox" class="u"/>
+	<i class="manasymbol-black"></i><input type="checkbox" class="b"/>
+	<i class="manasymbol-red"></i><input type="checkbox" class="r" />
+	<i class="manasymbol-green"></i><input type="checkbox" class="g"/>
+	</div>
+	<button style="margin:5%;" id="sorttoggle" onclick="Builder.sorter.toggleSortType();$('#sorttoggle').html('Switch to Sort: ' + Builder.sorter.getNextSortType(Builder.sorter.sortType)) + 'Sort'" class="margined btn btn-warning">Switch to Sort: Mana Cost</button>
+	</div>
+	<canvas id="deckbuilder-canvas" width="1650" height="1087">If you're seeing this, your browser does not support HTML5 CANVAS.
+	</canvas>
+	<div id="graphs">
+		<div id="graph1" class="well pull-left third padded margined"></div>
+		<div id="graph2" class="well pull-left third padded margined"></div>
+		<div id="graph3" class="well pull-left third padded margined"></div>
+	</div>.
+	<div id="info">
+		<div class="well half pull-left margined padded">
+		<h2> Deck Info </h2>
+			Name:<br>
+			<input type="text" id="deckname" placeholder="Deck Name"/> <br>
+			<input class="pull-left" style="width:20px;" value="true" id="deckpublish" type="checkbox"/>Publish? <br><span style="font-size:11px;width:400px;">(Note: Decks will only be published when they have more than 40 cards)</span> <br>
+			Description: <br>
+			<textarea id="deckdescription"></textarea><br>
+			Format: <select id="deckformat"></select>
+		</div>
+		<div class="well half pull-left margined padded">
+		<h2 class="pull-left"> Deck List </h2>
+		<button id="decklist-modal-open" class="btn btn-primary pull-right margined">Import Decklist</button>
+		<div class="clearfix"></div>
+		<div id="decklist">
+		</div>
+		
+		</div>
+	</div>
+
+	<script src="/app/programs/deckbuilder/builder.js"></script>
+</div>
+
+<div class="modal" id="decklist-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Import Decklist</h4>
+      </div>
+      <div class="modal-body">
+        <p align="center"><textarea style="width:500px;height:200px;border:1px solid #999"></textarea></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="decklist-button-load" class="btn btn-primary">Load Decklist</button>
+      </div>
+    </div>
+  </div>
+</div>
