@@ -1,0 +1,10 @@
+#Rewrite rule to get deeplinks to work for angular
+#This doesn't work yet for routes that have parameters passed to them (ie more than one 'directory')
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+RewriteRule ^(.*) /index.html [NC,L]
