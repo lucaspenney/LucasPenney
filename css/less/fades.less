@@ -31,28 +31,32 @@
     animation-duration:2.5s;
 }
 
-.fade {
+.view-animate {
     position:absolute;
     width:960px;
     opacity: 1;
     margin-bottom:60px;
 }
-.fade.ng-enter,
-.fade.ng-leave {
+.view-animate.ng-enter,
+.view-animate.ng-leave {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
 }
-.fade.ng-enter {
+.view-animate.ng-enter {
     opacity: 0;
+    padding-top:100px;
 }
-.fade.ng-enter-active {
+.view-animate.ng-enter-active {
     opacity: 1;
+    padding-top:0px;
 }
-.fade.ng-leave {
+.view-animate.ng-leave {
     opacity: 1;
+    padding-top:0px;
 }
-.fade.ng-leave-active {
+.view-animate.ng-leave-active {
     opacity: 0;
+    padding-top:100px;
 }
