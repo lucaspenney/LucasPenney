@@ -3,15 +3,19 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'mgcrea.n
 		.html5Mode(true)
 		.hashPrefix('!');
 	$routeProvider.when('/about', {
-		templateUrl: 'app/views/home.html',
+		templateUrl: '/app/views/home.html',
 		controller: homeController,
 	});
 	$routeProvider.when('/resume', {
-		templateUrl: 'app/views/resume.html',
+		templateUrl: '/app/views/resume.html',
 		controller: homeController,
 	});
 	$routeProvider.when('/portfolio', {
-		templateUrl: 'app/views/portfolio.html',
+		templateUrl: '/app/views/portfolio.html',
+		controller: portfolioController,
+	});
+	$routeProvider.when('/portfolio/:work', {
+		templateUrl: '/app/views/portfolio-item.html',
 		controller: portfolioController,
 	});
 	$routeProvider.otherwise({
