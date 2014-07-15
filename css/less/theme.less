@@ -59,49 +59,24 @@ body {
 	}
 	.navbar-nav > li > a{
 		color:@primary;
+
+	}
+	.navbar-nav > li > a:hover {
+	    -webkit-transition: all 1s ease;
+	    -moz-transition: all 1s ease; 
+	    -o-transition: all 1s ease;
+ 	   transition: all 1s ease;
+ 	   opacity:0.7;
+		i {
+	    -webkit-transition: all 1s ease;
+	    -moz-transition: all 1s ease; 
+	    -o-transition: all 1s ease;
+ 	   transition: all 1s ease;
+ 	   		opacity:0.3;
+		}
 	}
 }
 
-.navigation {
-  background-color:@secondary;
-  position:absolute;
-  top:-10px;
-  height:60px;
-  padding-top:-8px;
-  width:100%;
-}
-.navigaton-list {
-  list-style:none;
-  list-style-type:none;
-  height:1px;
-}
-.navigation-list li {
-  float:left;
-  padding:10px;
-  padding-top:15px;
-  padding-bottom:2px;
-  margin-left:5px;
-  list-style:none;
-  list-style-type:none;
-  i {
-    text-decoration: none !important;
-    color:white;
-  }
-}
-
-.nav-container {
-  width:1020px;
-  margin: 0 auto;
-}
-.nav a, .navbar-brand {
-  color:@font-color;
-}
-//Nav menu item hover state
-.navigation-list li a:hover {
-  background-color:@secondary;
-  color:#fff;
-  text-decoration:none;
-}
 h1,h2,h3,h4,h5,h6 {
   font-weight:300;
 }
