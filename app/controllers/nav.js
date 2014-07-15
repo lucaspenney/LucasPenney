@@ -1,4 +1,4 @@
-function navController($scope, $route, $routeParams, $location, $http, $timeout) {
+function navController($scope, $http, $timeout) {
 	$scope.navLinks = [{
 		name: "About",
 		icon: "fa-user",
@@ -12,4 +12,5 @@ function navController($scope, $route, $routeParams, $location, $http, $timeout)
 		icon: "fa-briefcase",
 		link: "/portfolio"
 	}];
+	console.log($scope.navLinks);
 };

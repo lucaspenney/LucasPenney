@@ -1,1 +1,24 @@
 <h1>Portfolio</h1>
+
+<div class="half padded pull-left">
+	<h2> Web Development </h2>
+	<div ng-repeat="item in webWork">
+	<h4>{{item.name}}</h4>
+	<p> {{item.description}}</p>
+	</div>
+</div>
+
+
+<div class="half padded pull-left">
+	<h2> Web Development </h2>
+	<div ng-repeat="item in gameWork" ng-click="selectedWork=item">
+	<h4>{{item.name}}</h4>
+	<p> {{item.description}}</p>
+	</div>
+</div>
+
+<div class="showcase" ng-show="selectedWork">
+	<h4>{{selectedWork.name}}</h4>
+	<p> {{selectedWork.description}}</p>
+	<img ng-repeat="img in selectedWork.images" src="{{img}}"/>
+</div>

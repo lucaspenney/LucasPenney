@@ -11,8 +11,8 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'mgcrea.n
 		controller: homeController,
 	});
 	$routeProvider.when('/portfolio', {
-		templateUrl: 'app/views/work.html',
-		controller: homeController,
+		templateUrl: 'app/views/portfolio.html',
+		controller: portfolioController,
 	});
 	$routeProvider.otherwise({
 		redirectTo: '/about'
