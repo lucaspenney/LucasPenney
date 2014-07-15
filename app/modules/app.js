@@ -10,7 +10,7 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'mgcrea.n
 		templateUrl: 'app/views/resume.html',
 		controller: homeController,
 	});
-	$routeProvider.when('/work', {
+	$routeProvider.when('/portfolio', {
 		templateUrl: 'app/views/work.html',
 		controller: homeController,
 	});
