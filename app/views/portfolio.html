@@ -1,19 +1,23 @@
 <h1>Portfolio</h1>
 
+
 <div class="half padded pull-left">
-	<h2> Web Development </h2>
-	<div ng-repeat="item in webWork">
+	<h2 class="portfolio-header"> Web Development </h2>
+	<div class="portfolio-item" ng-repeat="item in webWork" ng-click="selectWork(item)">
 	<h4>{{item.name}}</h4>
+	<img class="pull-left" src="http://placehold.it/150/150"/>
 	<p> {{item.description}}</p>
+	<div class="clearfix"></div>
 	</div>
 </div>
 
-
-<div class="half padded pull-left">
-	<h2> Web Development </h2>
-	<div ng-repeat="item in gameWork" ng-click="selectedWork=item">
+<div class="half padded pull-right">
+	<h2 class="portfolio-header"> Game Development </h2>
+	<div class="portfolio-item" ng-repeat="item in gameWork" ng-click="selectWork(item)">
 	<h4>{{item.name}}</h4>
+	<img class="pull-left" src="http://placehold.it/150/150"/>
 	<p> {{item.description}}</p>
+	<div class="clearfix"></div>
 	</div>
 </div>
 
