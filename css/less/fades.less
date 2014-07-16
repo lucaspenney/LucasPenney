@@ -39,6 +39,12 @@
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
+    @media only screen and (max-width : 1224px) {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
 }
 .view-animate.ng-enter {
     opacity: 0;
@@ -62,6 +68,7 @@
 
 
 .pull-in {
+
 }
 .pull-in.ng-enter,
 .pull-in.ng-leave {
@@ -69,6 +76,12 @@
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
+    @media only screen and (max-width : 1224px) {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
 }
 .pull-in.ng-enter {
     opacity: 0;
