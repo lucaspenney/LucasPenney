@@ -1,4 +1,7 @@
-function navController($scope, $http, $timeout) {
+function navController($scope, $route, $location, $http, $timeout) {
+
+	$scope.viewAnimation = 'view-animate';
+
 	$scope.navLinks = [{
 		name: "About",
 		icon: "fa-user",
@@ -12,5 +15,13 @@ function navController($scope, $http, $timeout) {
 		icon: "fa-briefcase",
 		link: "/portfolio"
 	}];
-	console.log($scope.navLinks);
+
+	$scope.$on('$routeChangeStart', function(next, current) {
+		var path = $location.path();
+		if (path.indexOf('/portfolio/') !== -1) {
+			$scope.viewAnimation = 'pull-in';
+		} else {
+			$scope.viewAnimation = 'view-animate';
+		}
+	});
 };

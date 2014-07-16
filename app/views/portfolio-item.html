@@ -1,3 +1,10 @@
+<div class="third pull-left portfolio-back">
+<a href="/portfolio"><i class="fa fa-4x fa-arrow-circle-left"></i></a>
+</div>
+
+<div class="twothirds pull-right portfolio-showcase">
 <h1>{{selectedWork.name}}</h1>
-<img ng-repeat="img in selectedWork.images track by $index" src="{{img}}"></img>
-<p> {{selectedWork.description}}</p>
+<img class="padded margined" ng-repeat="img in selectedWork.images track by $index" src="{{img}}"></img>
+<br>
+<p class="padded"> {{selectedWork.description}}</p>
+</div>

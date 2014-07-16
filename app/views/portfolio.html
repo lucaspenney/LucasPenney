@@ -1,26 +1,24 @@
-<h1>Portfolio</h1>
-
-
-<div class="half padded pull-left">
-	<h2 class="portfolio-header"> Web Development </h2>
+<h2>Portfolio</h2>
+<div>
+	<h5 class="portfolio-header"> Web Development </h5>
 	<div class="portfolio-item" ng-repeat="item in work" ng-show="item.category=='web'">
 	<a href="/portfolio/{{item.slug}}">
-	<h4>{{item.name}}</h4>
+	<h5>{{item.name}}</h5>
 	<img class="pull-left" src="http://placehold.it/150/150"/>
-	<p> {{item.description}}</p>
-	</a>
 	<div class="clearfix"></div>
+	<p> </p>
+	</a>
 	</div>
+	<div class="clearfix"></div>
 </div>
 
-<div class="half padded pull-right">
-	<h2 class="portfolio-header"> Game Development </h2>
+<div>
+	<h5 class="portfolio-header"> Game Development </h5>
 	<div class="portfolio-item" ng-repeat="item in work" ng-show="item.category=='game'">
 	<a href="/portfolio/{{item.slug}}">
-	<h4>{{item.name}}</h4>
+	<h5>{{item.name}}</h5>
 	<img class="pull-left" src="http://placehold.it/150/150"/>
-	<p> {{item.description}}</p>
-	</a>
 	<div class="clearfix"></div>
+	</a>
 	</div>
 </div>

@@ -35,6 +35,7 @@ body {
 	width:80%;
 	max-width:800px;
 	background-color:@primary;
+  position:absolute;
 	@media only screen and (min-width : 1224px) {
 	margin-left:-400px;
 	left:50%;
@@ -80,6 +81,9 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-weight:300;
 }
+h2 {
+  margin: 30px 0;
+}
 a {
   color:@secondary;
 }
@@ -96,6 +100,7 @@ a:hover {
   z-index:-5;
   font-size:10px;
   padding-top: 5px;
+  color:#333;
 }
 
 .gray {
@@ -193,6 +198,9 @@ input, option, textarea {
   box-shadow: 0px 0px 10px #333333;
 }
 
+.underline {
+  text-decoration:underline;
+}
 .img-responsive {
   width:100%;
   height:auto;
@@ -231,25 +239,41 @@ input, option, textarea {
     background: @secondary - #111; 
 }
 
-.showcase {
-  .content;
+.portfolio-back {
+  i {
+    margin-top:100px;
+    margin-left:50px;
+    @media only screen and (max-width : 1224px) {
+      opacity:0;
+    }
+  }
 }
 
-.portfolio-item {
-  width:100%;
-  margin-left:5%;
+.portfolio-showcase {
   img {
-    width:50%;
-    margin:3%;
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+.portfolio-item { 
+  width:20%;
+  float:left;
+  h5 {
+    text-align:center;
+  }
+  img {
+    width:60%;
+    margin-left:20%;
   }
   p {
-    padding-top:2%;
+    padding:5%;
     font-size:90%;
   }
   a {
     color:rgb(85, 85, 85);
   }
-  margin-bottom:5%;
+  margin-bottom:3%;
 }
 .portfolio-header {
   color:@secondary;
