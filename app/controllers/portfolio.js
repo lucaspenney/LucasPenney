@@ -2,32 +2,32 @@ function portfolioController($scope, $route, $routeParams, $location, $http, $ti
 	$scope.work = [{
 		name: "ManaStack",
 		category: "web",
-		images: ['http://placehold.it/50/50', 'http://placehold.it/50/50', 'http://placehold.it/50/50'],
+		images: [''],
 		description: "ManaStack is a blah blah"
 	}, {
 		name: "Learn Cryptography",
 		category: "web",
-		images: [],
+		images: ['/img/portfolio/learncrypto.png'],
 		description: "Learn Cryptography is blah blah"
 	}, {
 		name: "Freelance Web Design",
 		category: "web",
-		images: [],
-		description: "I did some freelance web design blah blah"
+		images: ['/img/portfolio/komcpc.png', '/img/portfolio/bcrealtynews.png', '/img/portfolio/gawthropfinancial.png', '/img/portfolio/gentlehat.png'],
+		description: "Freelance Web Design: 2010-2012"
 	}, {
 		name: "Night of Darkness",
 		category: "game",
-		images: [],
-		description: "Night of darkness blah blah"
+		images: ['/img/portfolio/nightofdarkness.png'],
+		description: "Night of darkness and it's subsequent sequel were both entries to the One Game A Month challenge. The development time of both the original and follow up was one month long."
 	}, {
 		name: "Apocalypse Mod",
 		category: "game",
-		images: [],
+		images: ['/img/portfolio/apocmod.png'],
 		description: "Apocalypse mod blah blah"
 	}, {
 		name: "Inescapable Darkness",
 		category: "game",
-		images: [],
+		images: ['/img/portfolio/inescapabledarkness.png'],
 		description: "Inescapable Darkness blah blah"
 	}];
 
