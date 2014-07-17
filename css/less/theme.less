@@ -44,17 +44,18 @@ body {
 
 /* Navigation */
 
-.site-logo {
-  width:32px;
-  height:32px;
-  margin-top:-16px;
-  margin-bottom:-12px;
-  padding-right:5px;
-  opacity:0.8;
-}
 .navbar-inverse {
 	background-color: @secondary;
 	border: none;
+  @media only screen and (min-width : 1224px) {
+    padding:0 250px;
+    .navbar-nav {
+      padding-left:325px;
+    }
+  }
+  .navbar-brand {
+    color:@primary;
+  }
 	.navbar-nav {
 		margin: 0 auto;
 	}
@@ -247,8 +248,7 @@ input, option, textarea {
 .portfolio-back {
   a {
     i {
-      margin-top:100px;
-      margin-left:50px;
+      padding: 100px 50px;
       width:100%;
       height:50%;
     } 
@@ -267,11 +267,14 @@ input, option, textarea {
 
 .portfolio-showcase {
   img {
-    width: 100%;
+    width: 23%;
+    margin-left:3.3%;
     max-width: 150px;
   }
   .bigimg {
-    max-width:90%;
+    width:100%;
+    max-width:400px;
+    margin-bottom:2%;
     display:block;
   }
   @media only screen and (max-width : 1224px) {
@@ -286,7 +289,7 @@ input, option, textarea {
   }
 }
 .portfolio-description {
-  margin-top:200px;
+  margin-top:50px;
   font-style:italic;
   font-size:85%;
 }

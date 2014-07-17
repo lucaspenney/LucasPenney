@@ -4,7 +4,7 @@
 	<div class="portfolio-item" ng-repeat="item in work" ng-show="item.category=='web'">
 	<a href="/portfolio/{{item.slug}}">
 	<h5>{{item.name}}</h5>
-	<img class="pull-left shadow" src="{{item.images[0]}}"/>
+	<img class="pull-left shadow" src="/img/portfolio/{{item.images[0]}}"/>
 	<div class="clearfix"></div>
 	<p> </p>
 	</a>
@@ -17,7 +17,7 @@
 	<div class="portfolio-item" ng-repeat="item in work" ng-show="item.category=='game'">
 	<a href="/portfolio/{{item.slug}}">
 	<h5>{{item.name}}</h5>
-	<img class="pull-left shadow" src="{{item.images[0]}}"/>
+	<img class="pull-left shadow" src="/img/portfolio/{{item.images[0]}}"/>
 	<div class="clearfix"></div>
 	</a>
 	</div>

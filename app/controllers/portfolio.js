@@ -2,33 +2,33 @@ function portfolioController($scope, $route, $routeParams, $location, $http, $ti
 	$scope.work = [{
 		name: "ManaStack",
 		category: "web",
-		images: [''],
-		description: "ManaStack is a blah blah"
+		images: ['manastack-intro.png', 'manastack-home.png', 'manastack-builder.png', 'manastack-database.png'],
+		description: "ManaStack is a suite of tools for creating and playtesting Magic: The Gathering decks. You can check it out at <a href='http://manastack.com'>ManaStack.com</a>"
 	}, {
 		name: "Learn Cryptography",
 		category: "web",
-		images: ['/img/portfolio/learncrypto.png'],
-		description: "Learn Cryptography is blah blah"
+		images: ['learncryptography.png'],
+		description: "Learn Cryptography is a resource website for those interested in learning about Cryptography. Topics include data encryption, hash functions, Bitcoin, and steganography. You can check it out at <a href='http://learncryptography.com/''>LearnCryptography.com</a>."
 	}, {
 		name: "Freelance Web Design",
 		category: "web",
-		images: ['/img/portfolio/komcpc.png', '/img/portfolio/bcrealtynews.png', '/img/portfolio/gawthropfinancial.png', '/img/portfolio/gentlehat.png'],
+		images: ['gentlehat.png', 'komcpc.png', 'bcrealtynews.png', 'gawthropfinancial.png'],
 		description: "Freelance Web Design: 2010-2012"
 	}, {
 		name: "Night of Darkness",
 		category: "game",
-		images: ['/img/portfolio/nightofdarkness.png'],
-		description: "Night of darkness and it's subsequent sequel were both entries to the One Game A Month challenge. The development time of both the original and follow up was one month long."
+		images: ['nightofdarkness.png'],
+		description: "Night of darkness and it's subsequent sequel were both entries to the One Game A Month challenge. The development time of both the original and follow up was one month long. You can play the completed games on <a href='http://www.kongregate.com/games/GentleHat/night-of-darkness-2'>Kongregate</a>."
 	}, {
 		name: "Apocalypse Mod",
 		category: "game",
-		images: ['/img/portfolio/apocmod.png'],
-		description: "Apocalypse mod blah blah"
+		images: ['apocmod.png'],
+		description: "Apocalypse Mod is a large-scale server side mod for Left 4 Dead. Features include a completely rewritten AI director system, new weapon types, lighting and map changes, and many significant gameplay changes. Check it out at <a href='http://apocalypsemod.com'>ApocalypseMod.com</a>."
 	}, {
 		name: "Inescapable Darkness",
 		category: "game",
-		images: ['/img/portfolio/inescapabledarkness.png'],
-		description: "Inescapable Darkness blah blah"
+		images: ['inescapabledarkness.png'],
+		description: "Inescapable Darkness is a survival mode map for Left 4 Dead created in collaboration with James Morrison (CAPTAINCANADA). You can see screenshots and download at <a href='http://www.l4dmaps.com/details.php?file=20558'>L4DMaps</a>."
 	}];
 
 	$scope.selectedWork = {};
