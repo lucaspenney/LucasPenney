@@ -1,7 +1,8 @@
 
 <div class="twothirds pull-right portfolio-showcase">
 <h1>{{selectedWork.name}}</h1>
-<img class="padded margined shadow" ng-class="{'bigimg': img == selectedWork.images[0]}" ng-repeat="img in selectedWork.images track by $index" src="/img/portfolio/{{img}}"></img>
+<img class="padded margined shadow bigimg" src="/img/portfolio/{{selectedImage}}"/>
+<img class="padded margined shadow" ng-repeat="img in selectedWork.images track by $index" src="/img/portfolio/{{img}}" ng-click="selectImage(img)"></img>
 <br>
 </div>
 

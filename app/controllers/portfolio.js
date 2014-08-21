@@ -2,7 +2,7 @@ function portfolioController($scope, $route, $routeParams, $location, $http, $ti
 	$scope.work = [{
 		name: "ManaStack",
 		category: "web",
-		images: ['manastack-intro.png', 'manastack-home.png', 'manastack-builder.png', 'manastack-database.png'],
+		images: ['manastack-intro.png', 'manastack-builder.png', 'manastack-database.png'],
 		description: "ManaStack is a suite of tools for creating and playtesting Magic: The Gathering decks. You can check it out at <a href='http://manastack.com'>ManaStack.com</a>"
 	}, {
 		name: "Learn Cryptography",
@@ -41,8 +41,13 @@ function portfolioController($scope, $route, $routeParams, $location, $http, $ti
 		for (var i = 0; i < $scope.work.length; i++) {
 			if ($scope.work[i].slug == $routeParams.work) {
 				$scope.selectedWork = $scope.work[i];
+				$scope.selectedImage = $scope.selectedWork.images[0];
 				break;
 			}
 		}
+	}
+
+	$scope.selectImage = function(img) {
+		$scope.selectedImage = img;
 	}
 };
