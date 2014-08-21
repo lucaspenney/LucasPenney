@@ -2,6 +2,11 @@
 #This doesn't work yet for routes that have parameters passed to them (ie more than one 'directory')
 
 RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^blog\.lucaspenney\.com$
+RewriteCond %{REQUEST_URI} !^/blog/
+RewriteRule (.*)$ /blog/$1 [L]
+
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
