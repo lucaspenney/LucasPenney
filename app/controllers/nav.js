@@ -8,11 +8,11 @@ function navController($scope, $route, $location, $http, $timeout) {
 		link: "/about"
 	}, {
 		name: "Resume",
-		icon: "fa-align-left",
+		icon: "fa-list-alt",
 		link: "/resume"
 	}, {
 		name: "Portfolio",
-		icon: "fa-briefcase",
+		icon: "fa-folder-open",
 		link: "/portfolio"
 	}];
 
