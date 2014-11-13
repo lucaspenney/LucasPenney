@@ -101,10 +101,10 @@ body {
       padding:20px;
       color: @primary; 
       opacity:1;
-      -webkit-transition: all 0.8s ease;
-      -moz-transition: all 0.8s ease; 
-      -o-transition: all 0.8s ease;
-      transition: all 0.8s ease;
+      -webkit-transition: all 0.6s ease;
+      -moz-transition: all 0.6s ease; 
+      -o-transition: all 0.6s ease;
+      transition: all 0.6s ease;
     }
     li:hover {
       opacity:0.5;
@@ -293,14 +293,14 @@ input, option, textarea {
 }
 
 .portfolio-back {
+  width:200px;
   a {
     i {
-      padding: 100px 50px;
+      padding-top: 30px;
+      padding-left:50px;
       width:100%;
-      height:50%;
     } 
   }
-  
   @media only screen and (max-width : 1224px) {
     padding:10%;
     width:100%;
@@ -310,28 +310,51 @@ input, option, textarea {
       clear:both;
     }
   }
+  .thumbnail-container {
+    margin-left:25%;
+    width:50%;
+    height:40px;
+    text-align:center;
+    float:left;
+  }
+  .thumbnail {
+    width:100%;
+  }
 }
 
 .portfolio-showcase {
-  img {
-    width: 23%;
-    margin-left:3.3%;
-    max-width: 150px;
-  }
+  text-align:center;
+  width:600px;
+  margin-right:-50px;
   .bigimg {
     width:100%;
-    max-width:400px;
-    margin-bottom:2%;
+    max-width:600px;
+    //Vertically align
     display:block;
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+  }
+  .bigimg-container {
+    min-height:600px;
+    position:relative;
   }
   @media only screen and (max-width : 1224px) {
-    padding-left:10%;
+    h1 {
+      padding:3%;
+    }
+    margin-right:0;
     width:100%;
+    .bigimg-container {
+      position:static;
+      min-height:1px;
+    }
     .bigimg {
-      width: 78%;
+      width: 90%;
       max-width:100%;
-      display:block;
-      margin-bottom:3%;
+      top:50%;
+      position:static;
     }
   }
 }
@@ -339,6 +362,10 @@ input, option, textarea {
   margin-top:50px;
   font-style:italic;
   font-size:85%;
+  @media only screen and (max-width : 1224px) {
+    margin-top:-20px;
+    margin-bottom:20px;
+  }
 }
 
 .portfolio {
@@ -382,10 +409,10 @@ input, option, textarea {
   max-width:50px;
   margin-left:9px;
   opacity:2;
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease; 
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease; 
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
   &:hover {
     opacity:0.7;
   }

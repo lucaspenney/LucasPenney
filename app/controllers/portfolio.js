@@ -2,12 +2,12 @@ function portfolioController($scope, $route, $routeParams, $location, $http, $ti
 	$scope.work = [{
 		name: "ManaStack",
 		category: "web",
-		images: ['manastack-intro.png', 'manastack-builder.png', 'manastack-database.png'],
+		images: ['manastack-intro.png', 'manastack-builder.png', 'manastack-deck.png', 'manastack-simulator.png'],
 		description: "ManaStack is a suite of tools for creating and playtesting Magic: The Gathering decks. You can check it out at <a href='http://manastack.com'>ManaStack.com</a>"
 	}, {
 		name: "Learn Cryptography",
 		category: "web",
-		images: ['learncryptography.png'],
+		images: ['learncryptography-1.png', 'learncryptography-2.png', 'learncryptography-3.png'],
 		description: "Learn Cryptography is a resource website for those interested in learning about Cryptography. Topics include data encryption, hash functions, Bitcoin, and steganography. You can check it out at <a href='http://learncryptography.com/''>LearnCryptography.com</a>."
 	}, {
 		name: "Freelance Web Design",
@@ -22,12 +22,12 @@ function portfolioController($scope, $route, $routeParams, $location, $http, $ti
 	}, {
 		name: "Apocalypse Mod",
 		category: "game",
-		images: ['apocmod.png'],
+		images: ['apocmod-1.png', 'apocmod-2.jpg', 'apocmod-3.jpg', 'apocmod-4.jpg'],
 		description: "Apocalypse Mod is a large-scale server side mod for Left 4 Dead. Features include a completely rewritten AI director system, new weapon types, lighting and map changes, and many significant gameplay changes. Check it out at <a href='http://apocalypsemod.com'>ApocalypseMod.com</a>."
 	}, {
 		name: "Inescapable Darkness",
 		category: "game",
-		images: ['inescapabledarkness.png'],
+		images: ['inescapabledarkness-1.png', 'inescapabledarkness-2.png', 'inescapabledarkness-3.png'],
 		description: "Inescapable Darkness is a survival mode map for Left 4 Dead created in collaboration with James Morrison (CAPTAINCANADA). You can see screenshots and download at <a href='http://www.l4dmaps.com/details.php?file=20558'>L4DMaps</a>."
 	}];
 

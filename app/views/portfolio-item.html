@@ -1,12 +1,16 @@
 
-<div class="twothirds pull-right portfolio-showcase">
+<div class="portfolio-showcase pull-right">
 <h1>{{selectedWork.name}}</h1>
-<img class="padded margined shadow bigimg" src="/img/portfolio/{{selectedImage}}"/>
-<img class="padded margined shadow" ng-repeat="img in selectedWork.images track by $index" src="/img/portfolio/{{img}}" ng-click="selectImage(img)"></img>
+<div class="bigimg-container">
+<img class="shadow bigimg padded" src="/img/portfolio/{{selectedImage}}"/>
+</div>
 <br>
 </div>
 
-<div class="third portfolio-back">
+<div class="portfolio-back pull-left">
 <a href="/portfolio"><i class="fa fa-4x fa-arrow-circle-left"></i></a>
 <p class="portfolio-description" ng-bind-html="selectedWork.description"></p>
+<div class="thumbnail-container">
+	<img class="thumbnail" ng-repeat="img in selectedWork.images track by $index" src="/img/portfolio/{{img}}" ng-click="selectImage(img)"></img>
+</div>
 </div>
