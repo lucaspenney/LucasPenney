@@ -40,10 +40,13 @@
     -o-transition: all 1s ease;
     transition: all 1s ease;
     @media only screen and (max-width : 1224px) {
+        /*
         -webkit-transition: none;
         -moz-transition: none;
         -o-transition: none;
         transition: none;
+        */
+        left:0 !important;
     }
 }
 .view-animate.ng-enter {
@@ -77,22 +80,33 @@
     -o-transition: all 1s ease;
     transition: all 1s ease;
     @media only screen and (max-width : 1224px) {
+        /*
         -webkit-transition: none;
         -moz-transition: none;
         -o-transition: none;
         transition: none;
+        */
     }
 }
 .pull-in.ng-enter {
     opacity: 0;
     left:30%;
+    @media only screen and (max-width : 1224px) {
+        left:-20%;
+    }
 }
 .pull-in.ng-enter-active, .pull-in.ng-leave {
     opacity: 1;
     left:50%;
+    @media only screen and (max-width : 1224px) {
+        left:0;
+    }
 }
 .pull-in.ng-leave-active {
     opacity: 0;
     left:30%;
+    @media only screen and (max-width : 1224px) {
+        left:-20%;
+    }
 }
 
