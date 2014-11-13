@@ -31,19 +31,20 @@ body {
   z-index:50;
   @media only screen and (max-width : 1224px) {
     padding-top:0;
+    overflow-x:hidden;
   }
 }
 
 .content {
-	padding:0;
-	width:100%;
-	max-width:800px;
-	background-color:@primary;
+  padding:0;
+  width:100%;
+  max-width:800px;
+  background-color:@primary;
   position:absolute;
-	@media only screen and (min-width : 1224px) {
-	margin-left:-400px;
-	left:50%;
-	}
+  @media only screen and (min-width : 1224px) {
+    margin-left:-400px;
+    left:50%;
+  }
 }
 
 /* Navigation */
@@ -53,17 +54,20 @@ body {
 	border: none;
   height:65px;
   font-weight:200;
-  .wrapper {
-    width:100%;
-    max-width:900px;
-    margin:0 auto;
-    padding-left:30px;
-  }
   @media only screen and (max-width : 1224px) {
     //Mobile
     height:auto;
     position:static;
     font-size:130%;
+  }
+  .wrapper {
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    padding-left:30px;
+    @media only screen and (max-width : 1224px) {
+      padding-left:0;
+    }
   }
   .site-title {
     color:@primary;
@@ -77,7 +81,7 @@ body {
       padding:0;
       position:relative;
       left:50%;
-      margin-left:-100px;
+      margin-left:-110px;
       text-align:center;
     }
   }
@@ -93,13 +97,14 @@ body {
       -webkit-transition: all 0.8s ease;
       -moz-transition: all 0.8s ease; 
       -o-transition: all 0.8s ease;
-       transition: all 0.8s ease;
+      transition: all 0.8s ease;
     }
     li:hover {
       opacity:0.5;
     }
   }
   @media only screen and (max-width : 1224px) {
+    padding-top:15px;
     .navigation-links {
       width:100%;
       li {
@@ -114,7 +119,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 h2 {
   margin: 30px 0;
-    @media only screen and (max-width : 1224px) {
+  @media only screen and (max-width : 1224px) {
     padding-left:10%;
   }
 }
@@ -123,6 +128,12 @@ a {
 }
 a:hover {
   color:@secondary + #333;
+}
+
+p {
+  @media only screen and (max-width : 1224px) {
+    margin:0 5%;
+  }
 }
 
 .footer {
@@ -161,10 +172,9 @@ a:hover {
 }
 .half {
   width:47%;
- 	@media only screen and (max-width : 1224px) {
-	 width:98%;
-   padding-left:5%;
-	}
+  @media only screen and (max-width : 1224px) {
+    width:98%;
+ }
 }
 .twothirds {
   width:65%;
@@ -197,11 +207,11 @@ a:hover {
 }
 
 .clearfix:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
+  content: "."; 
+  visibility: hidden; 
+  display: block; 
+  height: 0; 
+  clear: both;
 }
 .rect {
   width:100%;
@@ -228,7 +238,7 @@ input, option, textarea {
     //outline:1px solid @primary;
   }
 }
-
+  
 .shadow {
   box-shadow: 0px 0px 10px #333333;
 }
@@ -260,19 +270,19 @@ input, option, textarea {
 /* Style Scrollbar */
 
 ::-webkit-scrollbar {
-    width: 15px;
+  width: 15px;
 }
- 
+
 /* Track */
 ::-webkit-scrollbar-track {
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: @secondary - #111; 
+  background: @secondary - #111; 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: @secondary - #111; 
+  background: @secondary - #111; 
 }
 
 .portfolio-back {
@@ -284,15 +294,15 @@ input, option, textarea {
     } 
   }
   
-    @media only screen and (max-width : 1224px) {
-      padding:10%;
-      width:100%;
-      float:none;
-      i {
-        display:none;
-        clear:both;
-      }
+  @media only screen and (max-width : 1224px) {
+    padding:10%;
+    width:100%;
+    float:none;
+    i {
+      display:none;
+      clear:both;
     }
+  }
 }
 
 .portfolio-showcase {
@@ -366,11 +376,14 @@ input, option, textarea {
   margin-left:9px;
   opacity:0.7;
   -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease; 
-    -o-transition: all 0.8s ease;
-    transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease; 
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
   &:hover {
     opacity:1;
+  }
+  @media only screen and (max-width : 1224px) {
+    max-width:12%;
   }
 }
 
