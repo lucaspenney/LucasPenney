@@ -25,14 +25,14 @@
 </head>
 <div class="site-wrapper">
 <body class='fade-in' ng-controller="navController">
-    <div class="navbar navbar-fixed-top" role="navigation">
+    <div class="navbar" role="navigation">
       <div class="wrapper">
         <div class="half pull-left">
           <a class="site-title" href="/">Lucas Penney</a>
         </div>
         <div class="half pull-right text-centered">
           <ul class="navigation-links pull-left">
-            <a href="{{item.link}}" ng-repeat="item in navLinks"><li><i class="fa fa-fw smalltext" ng-class="item.icon"></i> {{item.name}}</li></a>
+            <a href="{{item.link}}" target="_blank" ng-repeat="item in navLinks"><li><i class="fa fa-fw smalltext" ng-class="item.icon"></i> {{item.name}}</li></a>
           </ul>
         </div>
       </div>
