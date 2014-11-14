@@ -311,24 +311,26 @@ input, option, textarea {
     }
   }
   .thumbnail-container {
-    margin-left:25%;
-    width:50%;
-    height:40px;
+    width:40%;
     text-align:center;
+    margin:5%;
     float:left;
-  }
-  .thumbnail {
-    width:100%;
+    img {
+      width:100%;
+    }
+    @media only screen and (max-width : 1224px) {
+      width:95%;
+    }
   }
 }
 
 .portfolio-showcase {
   text-align:center;
-  width:600px;
-  margin-right:-50px;
+  width:500px;
+  float:right;
   .bigimg {
     width:100%;
-    max-width:600px;
+    max-width:500px;
     //Vertically align
     display:block;
     position:absolute;
@@ -337,18 +339,20 @@ input, option, textarea {
     bottom:0;
   }
   .bigimg-container {
-    min-height:600px;
+    min-height:500px;
     position:relative;
   }
   @media only screen and (max-width : 1224px) {
     h1 {
       padding:3%;
+      padding-bottom:0;
     }
     margin-right:0;
     width:100%;
     .bigimg-container {
       position:static;
       min-height:1px;
+      display:none;
     }
     .bigimg {
       width: 90%;
@@ -365,6 +369,7 @@ input, option, textarea {
   @media only screen and (max-width : 1224px) {
     margin-top:-20px;
     margin-bottom:20px;
+    font-size:100%;
   }
 }
 
