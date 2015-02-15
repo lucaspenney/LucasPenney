@@ -14,6 +14,10 @@ function navController($scope, $route, $location, $http, $timeout) {
 		name: "Portfolio",
 		icon: "fa-folder-open",
 		link: "/portfolio"
+	}, {
+		name: "Blog",
+		icon: "fa-file-text-o",
+		link: "http://blog.lucaspenney.com/",
 	}];
 
 	$scope.$on('$routeChangeStart', function(next, current) {
