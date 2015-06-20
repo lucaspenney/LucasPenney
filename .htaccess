@@ -12,4 +12,10 @@ RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [NC,L]
 
-RewriteRule ^(.*) /index.html [NC,L]
+RewriteRule ^(.*) /index.php [NC,L]
+
+php_flag  log_errors on
+php_value error_log /var/www/LucasPenney/php_errors.log
+
+php_value error_reporting -1
+

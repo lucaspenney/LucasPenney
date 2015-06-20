@@ -2,3 +2,5 @@ node_modules/
 bower_components/
 css/main.css
 app/app.js
+app/templates.js
+php_errors.log
