@@ -27,6 +27,10 @@ THREEx.WindowResize = function(renderer, camera) {
 	};
 }
 
+function deg2rad(n) {
+	return n * (Math.PI / 180);
+}
+
 app.directive('background', function() {
 	return {
 		restrict: "E",
@@ -46,7 +50,8 @@ app.directive('background', function() {
 			renderer.setSize(WIDTH, HEIGHT);
 			renderer.setClearColor(0xffffff, 1);
 			camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 2022000);
-			camera.position.set(100, 200, 300);
+			camera.position.set(00, 2, -4440);
+			camera.lookAt(new THREE.Vector3(0, 0, 0));
 			THREEx.WindowResize(renderer, camera);
 			scene.add(camera);
 
@@ -56,69 +61,58 @@ app.directive('background', function() {
 
 			// Create a light, set its position, and add it to the scene.
 			var light = new THREE.PointLight(0xffffff);
-			light.position.set(-100, 200, 300);
+			light.position.set(500, 33, -40);
 			scene.add(light);
-			scene.fog = new THREE.FogExp2(0x333333, 0.002);
-			var sphereMaterial =
-				new THREE.MeshLambertMaterial({
-					color: 0xCC0000
+			scene.fog = new THREE.FogExp2(0xffffff, 0.005);
+			var boxMaterial =
+				new THREE.MeshBasicMaterial({
+					color: 0xBBBBBB,
+					wireframe: true,
 				});
 
-			var sphere = new THREE.Mesh(
+			var geometry = new THREE.PlaneGeometry(1000, 1000, 200, 200);
+			var box = new THREE.Mesh(geometry,
+				boxMaterial);
+			// add the box to the scene
+			//scene.add(box);
+			scene.add(box);
 
-				new THREE.SphereGeometry(
-					20,
-					52,
-					52),
-
-				sphereMaterial);
-
-			// add the sphere to the scene
-			scene.add(sphere);
-
-			var cloud = new THREE.PointCloud(sphere, new THREE.PointCloudMaterial({
-				size: 3,
-				color: 0x252525
-			}));
-			//scene.add(cloud);
-
-			var grid = new THREE.PointCloud(new THREE.PlaneBufferGeometry(1024, 1024, 32, 32), new THREE.PointCloudMaterial({
-				color: 0x0000ff,
-				size: 3
-			}));
-			grid.position.x = 0;
-			grid.position.y = -100;
-			grid.position.z = 0;
-			grid.rotation.x = -Math.PI / 2;
-			grid.rotation.x = -Math.PI / 2;
-			scene.add(grid);
+			var i = 0;
+			_.each(box.geometry.vertices, function(v, index) {
+				if (v.x > 100) {
+					var s = Math.pow(Math.floor(v.x / 60), 1.4);
+					v.z -= (s * 2);
+					if (Math.random() > 0.8) {
+						v.z -= Math.random() * 2;
+					}
+				}
+				if (Math.random() > 0.8) {
+					v.z -= Math.random() * 2;
+				}
+			});
+			box.geometry.verticesNeedUpdate = true;
+			box.rotation.set(1.25, 0, deg2rad(90));
 
 			var render = function() {
-				console.log('pointcloud');
 				requestAnimationFrame(render);
 				renderer.render(scene, camera);
-				sphere.position.set(0, 0, 0);
 
+				box.position.set(0, 0, 0);
 				var radius = 100;
 				var origin = 0;
 
-				//camera.position.z = 10 * Math.cos(camera.position.x);
+				var cameraTarget = {
+					x: 0,
+					y: 0,
+					z: -50
+				};
+
+
+				camera.position.z += (cameraTarget.z - camera.position.z) * 0.05;
+
 				//camera.lookAt(new THREE.Vector3(0, 0, 0));
 				//console.log(grid.geometry.attributes.position)
-				_.forEach(grid.geometry.attributes.position.array, function(v, i) {
 
-					if ((i + 1) % 3 === 0)
-						grid.geometry.attributes.position.array[i] = v + Math.random() * 0.4;
-
-					//grid.geometry.attributes.position.array[i] = grid.geometry.attributes.position.array[i] * (Math.random() + 0.5);
-				});
-
-				grid.geometry.attributes.position.needsUpdate = true;
-
-				grid.geometry.dynamic = true;
-
-				// changes to the vertices
-				grid.geometry.verticesNeedUpdate = true;
 			}
 			render();
 		}

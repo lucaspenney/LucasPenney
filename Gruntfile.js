@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 						'bower_components/lodash/dist/lodash.js',
 						'bower_components/remarkable/dist/remarkable.js',
 						'bower_components/threejs/build/three.js',
-						'/bower_components/lodash/lodash.js',
+						'bower_components/lodash/lodash.js',
 						'app/app.js',
 					]
 				},
