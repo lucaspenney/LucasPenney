@@ -43,7 +43,7 @@ app.directive('background', function() {
 			renderer = new THREE.WebGLRenderer({
 				antialias: true
 			});
-			$('body').append(renderer.domElement);
+			$(elem).append(renderer.domElement);
 
 			WIDTH = $(window).width();
 			HEIGHT = $(window).height()

@@ -35,7 +35,6 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
 </script>
 </head>
 <body class='fade-in' ng-controller="navController">
-  <div class="threejs"></div>
   <div class="site-wrapper">
     <div class="navbar" role="navigation">
       <div class="wrapper">
@@ -76,6 +75,6 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
         <script src="/app/templates.js?v=<?php echo $v?>"></script>
       <?php endif; ?>
       </div>
-      <background></background>
+      <background class="canvas-background"></background>
     </body>
   </html>
