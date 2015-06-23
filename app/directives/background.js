@@ -50,7 +50,7 @@ app.directive('background', function() {
 			renderer.setSize(WIDTH, HEIGHT);
 			renderer.setClearColor(0xffffff, 1);
 			camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 2022000);
-			camera.position.set(00, 2, -4440);
+			camera.position.set(00, -80, -300);
 			camera.lookAt(new THREE.Vector3(0, 0, 0));
 			THREEx.WindowResize(renderer, camera);
 			scene.add(camera);
@@ -91,7 +91,13 @@ app.directive('background', function() {
 				}
 			});
 			box.geometry.verticesNeedUpdate = true;
-			box.rotation.set(1.25, 0, deg2rad(90));
+			box.rotation.set(0, 0, deg2rad(90));
+
+			var rotationTarget = {
+				x: deg2rad(270),
+				y: deg2rad(180),
+				z: 0,
+			};
 
 			var render = function() {
 				requestAnimationFrame(render);
@@ -101,14 +107,27 @@ app.directive('background', function() {
 				var radius = 100;
 				var origin = 0;
 
+				_.each(box.geometry.vertices, function(v, index) {
+					if (Math.random() > 0.95) {
+						//v.z -= ((Math.random() * 2) - 1) * 0.05;
+					}
+				});
+				box.geometry.verticesNeedUpdate = true;
+
 				var cameraTarget = {
 					x: 0,
-					y: 0,
-					z: -50
+					y: 30,
+					z: -10
 				};
 
+				camera.rotation.x += (rotationTarget.x - camera.rotation.x) * 0.101;
+				camera.rotation.y += (rotationTarget.y - camera.rotation.y) * 0.101;
+				camera.rotation.z += (rotationTarget.z - camera.rotation.z) * 0.101;
 
-				camera.position.z += (cameraTarget.z - camera.position.z) * 0.05;
+
+				camera.position.x += (cameraTarget.x - camera.position.x) * 0.05;
+				camera.position.y += (cameraTarget.y - camera.position.y) * 0.001;
+				camera.position.z += (cameraTarget.z - camera.position.z) * 0.01;
 
 				//camera.lookAt(new THREE.Vector3(0, 0, 0));
 				//console.log(grid.geometry.attributes.position)
