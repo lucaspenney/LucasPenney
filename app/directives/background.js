@@ -99,6 +99,13 @@ app.directive('background', function() {
 				z: 0,
 			};
 
+
+			var cameraTarget = {
+				x: 0,
+				y: 30,
+				z: -10
+			};
+
 			var render = function() {
 				requestAnimationFrame(render);
 				renderer.render(scene, camera);
@@ -114,12 +121,6 @@ app.directive('background', function() {
 				});
 				box.geometry.verticesNeedUpdate = true;
 
-				var cameraTarget = {
-					x: 0,
-					y: 30,
-					z: -10
-				};
-
 				camera.rotation.x += (rotationTarget.x - camera.rotation.x) * 0.101;
 				camera.rotation.y += (rotationTarget.y - camera.rotation.y) * 0.101;
 				camera.rotation.z += (rotationTarget.z - camera.rotation.z) * 0.101;
@@ -134,6 +135,17 @@ app.directive('background', function() {
 
 			}
 			render();
+
+			scope.$on('$routeChangeSuccess', function(event, route) {
+				var page = route.$$route.originalPath.replace("/", "");
+				var positions = {
+					'about': 200,
+					'resume': 100,
+					'portfolio': 0,
+				};
+				var x = positions[page];
+				cameraTarget.x = x;
+			});
 		}
 	}
 });
