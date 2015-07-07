@@ -138,13 +138,11 @@ app.directive('background', function() {
 
 			scope.$on('$routeChangeSuccess', function(event, route) {
 				var path = route.$$route.originalPath;
-				console.log(path);
 				path = path.replace("/", ""); //Replace first /
 				if (path.indexOf("/") !== -1) {
 					path = path.substring(0, path.indexOf("/"));	
 				}
 				
-				console.log(path);
 				var positions = {
 					'about': 200,
 					'resume': 100,
