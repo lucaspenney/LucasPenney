@@ -137,13 +137,20 @@ app.directive('background', function() {
 			render();
 
 			scope.$on('$routeChangeSuccess', function(event, route) {
-				var page = route.$$route.originalPath.replace("/", "");
+				var path = route.$$route.originalPath;
+				console.log(path);
+				path = path.replace("/", ""); //Replace first /
+				if (path.indexOf("/") !== -1) {
+					path = path.substring(0, path.indexOf("/"));	
+				}
+				
+				console.log(path);
 				var positions = {
 					'about': 200,
 					'resume': 100,
 					'portfolio': 0,
 				};
-				var x = positions[page];
+				var x = positions[path];
 				cameraTarget.x = x;
 			});
 		}
