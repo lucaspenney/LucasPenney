@@ -28,6 +28,10 @@ module.exports = function(grunt) {
 			css: {
 				files: 'css/less/*',
 				tasks: ['less:development']
+			},
+			templates: {
+				files: ['app/views/**/*.html'],
+				tasks: ['ngtemplates:app']
 			}
 		},
 		uglify: {
@@ -42,6 +46,7 @@ module.exports = function(grunt) {
 						'bower_components/angular-sanitize/angular-sanitize.js',
 						'bower_components/angular-animate/angular-animate.js',
 						'bower_components/angular-scroll/angular-scroll.js',
+						'bower_components/angular-aria/angular-aria.js',
 						'bower_components/angular-material/angular-material.js',
 						'bower_components/bootstrap/dist/js/bootstrap.js',
 						'bower_components/lodash/dist/lodash.js',

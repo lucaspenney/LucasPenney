@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate'], function($routeProvider, $locationProvider) {
+var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'ngMaterial'], function($routeProvider, $locationProvider, $mdThemingProvider) {
 	$locationProvider
 		.html5Mode({
 			enabled: true,
@@ -24,4 +24,11 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate'], function
 	$routeProvider.otherwise({
 		redirectTo: '/about'
 	});
+	$mdThemingProvider.theme('default')
+		.primaryPalette('grey')
+		.accentPalette('blue-grey');
+});
+
+app.config(function($mdThemingProvider) {
+
 });

@@ -50,7 +50,7 @@ app.directive('background', function() {
 			renderer.setSize(WIDTH, HEIGHT);
 			renderer.setClearColor(0xffffff, 1);
 			camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 2022000);
-			camera.position.set(00, -80, -300);
+			camera.position.set(00, -80, -100);
 			camera.lookAt(new THREE.Vector3(0, 0, 0));
 			THREEx.WindowResize(renderer, camera);
 			scene.add(camera);
@@ -61,12 +61,12 @@ app.directive('background', function() {
 
 			// Create a light, set its position, and add it to the scene.
 			var light = new THREE.PointLight(0xffffff);
-			light.position.set(500, 33, -40);
+			light.position.set(200, 100, -300);
 			scene.add(light);
 			scene.fog = new THREE.FogExp2(0xffffff, 0.005);
 			var boxMaterial =
 				new THREE.MeshBasicMaterial({
-					color: 0xBBBBBB,
+					color: 0x999999,
 					wireframe: true,
 				});
 
@@ -83,11 +83,15 @@ app.directive('background', function() {
 					var s = Math.pow(Math.floor(v.x / 60), 1.4);
 					v.z -= (s * 2);
 					if (Math.random() > 0.8) {
+						v.z -= Math.random() * 4;
+					} else {
 						v.z -= Math.random() * 2;
 					}
 				}
 				if (Math.random() > 0.8) {
-					v.z -= Math.random() * 2;
+					v.z -= Math.random() * 3;
+				} else {
+					v.z -= Math.random() * 1;
 				}
 			});
 			box.geometry.verticesNeedUpdate = true;
@@ -140,9 +144,9 @@ app.directive('background', function() {
 				var path = route.$$route.originalPath;
 				path = path.replace("/", ""); //Replace first /
 				if (path.indexOf("/") !== -1) {
-					path = path.substring(0, path.indexOf("/"));	
+					path = path.substring(0, path.indexOf("/"));
 				}
-				
+
 				var positions = {
 					'about': 200,
 					'resume': 100,

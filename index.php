@@ -22,7 +22,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
   <link rel="stylesheet" href="/bower_components/angular-motion/dist/angular-motion.min.css">
   <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
-  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/material.min.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/roboto.min.css">
   <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/ripples.css">
   <link rel="stylesheet" href="/css/main.css">
 <script type="text/javascript">
@@ -56,15 +56,15 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
     <ng-view class="container-fluid content" ng-class="viewAnimation"></ng-view>
 
     <div class='footer' ng-controller="footerController">
-        &copy; 2014 Lucas Penney All Rights Reserved
+        &copy; 2015 Lucas Penney All Rights Reserved
     </div>
     <?php if (ENVIRONMENT == "development"): ?>
       <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
       <script src="/bower_components/angular/angular.min.js"></script>
       <script src="/bower_components/angular-route/angular-route.min.js"></script>
       <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
       <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+      <script src="/bower_components/angular-aria/angular-aria.js"></script>
       <script src="/bower_components/angular-material/angular-material.js"></script>
       <script src="/bower_components/threejs/build/three.js"></script>
       <script src="/bower_components/lodash/lodash.js"></script>
