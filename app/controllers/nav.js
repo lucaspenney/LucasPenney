@@ -17,7 +17,7 @@ app.controller("navController", function($scope, $route, $location, $http, $time
 	}, {
 		name: "Blog",
 		icon: "fa-file-text-o",
-		link: "http://blog.lucaspenney.com/",
+		link: "/blog",
 	}];
 
 	$scope.$on('$routeChangeStart', function(next, current) {

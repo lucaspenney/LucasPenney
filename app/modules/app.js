@@ -21,6 +21,10 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'ngMateri
 		templateUrl: '/app/views/portfolio-item.html',
 		controller: 'portfolioController',
 	});
+	$routeProvider.when('/blog', {
+		templateUrl: '/app/views/blog.html',
+		controller: 'blogController',
+	});
 	$routeProvider.otherwise({
 		redirectTo: '/about'
 	});
