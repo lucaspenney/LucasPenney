@@ -1,4 +1,4 @@
-function portfolioController($scope, $route, $routeParams, $location, $http, $timeout) {
+app.controller("portfolioController", function($scope, $route, $routeParams, $location, $http, $timeout) {
 	$scope.work = [{
 		name: "ManaStack",
 		category: "web",
@@ -50,4 +50,4 @@ function portfolioController($scope, $route, $routeParams, $location, $http, $ti
 	$scope.selectImage = function(img) {
 		$scope.selectedImage = img;
 	}
-};
+});

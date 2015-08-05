@@ -21,6 +21,9 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/bower_components/angular-motion/dist/angular-motion.min.css">
   <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/material.min.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/ripples.css">
   <link rel="stylesheet" href="/css/main.css">
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -62,8 +65,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
       <script src="/bower_components/angular-route/angular-route.min.js"></script>
       <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
       <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
-      <script src="/bower_components/angular-strap/dist/angular-strap.min.js"></script>
-      <script src="/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+      <script src="/bower_components/angular-material/angular-material.js"></script>
       <script src="/bower_components/threejs/build/three.js"></script>
       <script src="/bower_components/lodash/lodash.js"></script>
       <script src="/app/app.js?v=<?php echo $v?>"></script>
@@ -75,6 +77,6 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
         <script src="/app/templates.js?v=<?php echo $v?>"></script>
       <?php endif; ?>
       </div>
-      <background class="canvas-background"></background>
+      <!-- <background class="canvas-background"></background> -->
     </body>
   </html>

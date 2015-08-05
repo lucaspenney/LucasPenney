@@ -1,3 +1,3 @@
-function footerController($scope, $http, $location, $modal) {
+app.controller("footerController", function($scope, $http, $location) {
 
-}
+});

@@ -1,3 +1,3 @@
-function homeController($scope, $http, $location, $modal) {
+app.controller("homeController", function($scope, $http, $location) {
 
-}
+});

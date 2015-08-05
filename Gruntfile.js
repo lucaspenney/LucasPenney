@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		concat: {
 			app: {
-				src: ['app/modules/app.js', 'app/**/*.js', '!app/app.js', '!app/programs/**/*.js'], // source files mask
+				src: ['app/modules/app.js', 'app/controllers/*.js', 'app/**/*.js', '!app/app.js'],
 				dest: 'app/app.js', // destination folder
 			}
 		},
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: 'css/less/*',
-				tasks: ['less:main']
+				tasks: ['less:development']
 			}
 		},
 		uglify: {
@@ -41,9 +41,8 @@ module.exports = function(grunt) {
 						'bower_components/angular-route/angular-route.js',
 						'bower_components/angular-sanitize/angular-sanitize.js',
 						'bower_components/angular-animate/angular-animate.js',
-						'bower_components/angular-strap/dist/angular-strap.js',
-						'bower_components/angular-strap/dist/angular-strap.tpl.js',
 						'bower_components/angular-scroll/angular-scroll.js',
+						'bower_components/angular-material/angular-material.js',
 						'bower_components/bootstrap/dist/js/bootstrap.js',
 						'bower_components/lodash/dist/lodash.js',
 						'bower_components/remarkable/dist/remarkable.js',

@@ -1,4 +1,4 @@
-function navController($scope, $route, $location, $http, $timeout) {
+app.controller("navController", function($scope, $route, $location, $http, $timeout) {
 
 	$scope.viewAnimation = 'view-animate';
 
@@ -28,4 +28,4 @@ function navController($scope, $route, $location, $http, $timeout) {
 			$scope.viewAnimation = 'view-animate';
 		}
 	});
-};
+});
