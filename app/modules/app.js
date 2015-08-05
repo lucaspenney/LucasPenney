@@ -28,11 +28,10 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'ngMateri
 	$routeProvider.otherwise({
 		redirectTo: '/about'
 	});
-	$mdThemingProvider.theme('default')
-		.primaryPalette('grey')
-		.accentPalette('blue-grey');
 });
 
 app.config(function($mdThemingProvider) {
-
+	$mdThemingProvider.theme('default')
+		.primaryPalette('grey')
+		.accentPalette('blue-grey');
 });
