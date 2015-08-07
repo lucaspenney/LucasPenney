@@ -60,7 +60,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
     </div>
     <?php if (ENVIRONMENT == "development"): ?>
       <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="/bower_components/angular/angular.min.js"></script>
+      <script src="/bower_components/angular/angular.js"></script>
       <script src="/bower_components/angular-route/angular-route.min.js"></script>
       <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
       <script src="/bower_components/angular-animate/angular-animate.min.js"></script>

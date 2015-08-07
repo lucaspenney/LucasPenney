@@ -21,7 +21,7 @@ html {
 }
 body {
   height:100%;
-  padding-top:65px;
+  padding-top:90px;
   padding-bottom:60px;
   background-color:@secondary;
   z-index:50;
@@ -37,10 +37,10 @@ body {
 
 .content {
   color:@content-font-color;
-  max-width:900px;
+  width:960px;
   position:absolute;
   @media only screen and (min-width : 1224px) {
-    margin-left:-400px;
+    margin-left:-480px;
     left:50%;
   }
 }
@@ -58,7 +58,7 @@ body {
 /* Navigation */
 
 .navbar {
-  box-shadow: 0px 3px 3px #111;
+  .shadow;
   color:@nav-font-color;
 	border: none;
   height:65px;
@@ -75,7 +75,7 @@ body {
   }
   .wrapper {
     width:100%;
-    max-width:900px;
+    max-width:960px;
     margin:0 auto;
     padding-left:30px;
     @media only screen and (max-width : 1224px) {
@@ -138,7 +138,7 @@ h2 {
   }
 }
 a {
-  color:@secondary;
+  color:@content-font-color - #333;
 }
 a:hover {
   color:@secondary + #333;
@@ -155,7 +155,7 @@ p {
   left:50%;
   height:30px;
   margin-left:-450px;
-  width:900px;
+  width:960px;
   z-index:-5;
   font-size:10px;
   padding-top: 5px;
@@ -164,9 +164,6 @@ p {
 
 .gray {
   color:#555555;
-  &:hover {
-    color:#444444 !important;
-  }
 }
 .darkgray {
   color:#333333 !important;
@@ -175,10 +172,11 @@ p {
 //Wells
 .well {
   background-color:@primary !important;
-  color:@nav-font-color !important; 
+  color:@nav-font-color !important;
   background-image:none;
   border-radius:0px;
   border:0;
+  .shadow;
 }
 .third {
   width:32.3%;
@@ -254,7 +252,7 @@ input, option, textarea {
 }
 
 .shadow {
-  box-shadow: 0px 0px 10px #333333;
+  box-shadow: 0px 4px 4px #111;
 }
 
 .underline {
@@ -300,11 +298,12 @@ input, option, textarea {
 }
 
 .portfolio-back {
-  width:200px;
+  width:350px;
+  text-align:center;
   a {
     i {
       padding-top: 30px;
-      padding-left:50px;
+      padding-bottom: 30px;
       width:100%;
     }
   }
@@ -317,37 +316,43 @@ input, option, textarea {
       clear:both;
     }
   }
-  .thumbnail-container {
-    width:40%;
-    text-align:center;
-    margin:5%;
-    float:left;
-    img {
-      width:100%;
-    }
-    @media only screen and (max-width : 1224px) {
-      width:95%;
-    }
+}
+.portfolio-description {
+  text-align:left;
+}
+.thumbnails {
+  width:100%;
+}
+.thumbnail-container {
+  width:15%;
+  text-align:center;
+  margin:5%;
+  float:left;
+  img {
+    width:100%;
+  }
+  @media only screen and (max-width : 1224px) {
+    width:35%;
   }
 }
 
 .portfolio-showcase {
+  .well;
+  padding:30px;
   text-align:center;
-  width:500px;
+  width:550px;
   float:right;
   .bigimg {
     width:100%;
     max-width:500px;
     //Vertically align
-    display:block;
-    position:absolute;
-    margin:auto;
     top:0;
     bottom:0;
   }
   .bigimg-container {
     min-height:500px;
     position:relative;
+    text-align:center;
   }
   @media only screen and (max-width : 1224px) {
     h1 {
@@ -362,7 +367,6 @@ input, option, textarea {
       display:none;
     }
     .bigimg {
-      width: 90%;
       max-width:100%;
       top:50%;
       position:static;
@@ -370,9 +374,13 @@ input, option, textarea {
   }
 }
 .portfolio-description {
+  .well;
+  padding:20px;
+  p {
+    font-style:italic;
+    font-size:100%;
+  }
   margin-top:50px;
-  font-style:italic;
-  font-size:85%;
   @media only screen and (max-width : 1224px) {
     margin-top:-20px;
     margin-bottom:20px;
@@ -423,9 +431,9 @@ input, option, textarea {
 
 .social-icon {
   width:100%;
-  max-width:50px;
+  max-width:40px;
   margin-left:9px;
-  opacity:2;
+  opacity:1;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
@@ -441,6 +449,7 @@ input, option, textarea {
 
 .profile-image {
 	width:220px;
+  margin-bottom:10px;
 }
 
 .resume {
@@ -450,4 +459,26 @@ input, option, textarea {
   h4 {
     margin-top:20px;
   }
+}
+.clearfix {
+  clear:both;
+}
+
+.about-page {
+  padding:40px 20px !important;
+}
+code {
+  background-color: @secondary;
+  color: @content-font-color - #333;
+}
+[animate-on-change]{
+    -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity:1;
+}
+[animate-on-change].change {
+
+  opacity:0;
 }

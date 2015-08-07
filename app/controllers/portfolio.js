@@ -8,7 +8,7 @@ app.controller("portfolioController", function($scope, $route, $routeParams, $lo
 		name: "Learn Cryptography",
 		category: "web",
 		images: ['learncryptography-1.png', 'learncryptography-2.png', 'learncryptography-3.png'],
-		description: "Learn Cryptography is a resource website for those interested in learning about Cryptography. Topics include data encryption, hash functions, Bitcoin, and steganography. You can check it out at <a href='http://learncryptography.com/''>LearnCryptography.com</a>."
+		description: "Learn Cryptography is a resource website for those interested in learning about Cryptography. Topics include data encryption, hash functions, Bitcoin, and steganography. You can check it out at <a href='http://learncryptography.com/'>LearnCryptography.com</a>."
 	}, {
 		name: "Freelance Web Design",
 		category: "web",
@@ -49,5 +49,5 @@ app.controller("portfolioController", function($scope, $route, $routeParams, $lo
 
 	$scope.selectImage = function(img) {
 		$scope.selectedImage = img;
-	}
+	};
 });
