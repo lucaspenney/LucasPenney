@@ -4,3 +4,4 @@ css/main.css
 app/app.js
 app/templates.js
 php_errors.log
+vendor/

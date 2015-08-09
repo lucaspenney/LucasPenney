@@ -25,6 +25,10 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'ngMateri
 		templateUrl: '/app/views/blog.html',
 		controller: 'blogController',
 	});
+	$routeProvider.when('/blog/:slug', {
+		templateUrl: '/app/views/blog-post.html',
+		controller: 'blogController',
+	});
 	$routeProvider.otherwise({
 		redirectTo: '/about'
 	});
