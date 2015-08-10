@@ -2,7 +2,7 @@ app.controller("portfolioController", function($scope, $route, $routeParams, $lo
 	$scope.work = [{
 		name: "ManaStack",
 		category: "web",
-		images: ['manastack2-deck.jpg', 'manastack2-builder.jpg', 'manastack2-database.jpg', 'manastack2-sandbox.jpg'],
+		images: ['manastack2-builder.jpg', 'manastack2-deck.jpg', 'manastack2-database.jpg', 'manastack2-sandbox.jpg'],
 		description: "ManaStack is a suite of tools for creating and playtesting Magic: The Gathering decks. You can check it out at <a href='http://manastack.com'>ManaStack.com</a>"
 	}, {
 		name: "Learn Cryptography",
