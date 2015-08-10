@@ -336,6 +336,7 @@ input, option, textarea {
   @media only screen and (max-width : 1224px) {
     width:35%;
   }
+  vertical-align: middle;
 }
 
 .portfolio-showcase {
@@ -347,14 +348,22 @@ input, option, textarea {
   .bigimg {
     width:100%;
     max-width:500px;
-    //Vertically align
-    top:0;
-    bottom:0;
   }
   .bigimg-container {
-    min-height:500px;
-    position:relative;
-    text-align:center;
+    height:500px;
+    display: inline-block;
+    vertical-align: middle;
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 100%;
+      vertical-align: middle;
+      /* this just takes care of whitespace added by having display:inline-block (there are other methods) */
+      margin-left: -0.25em;
+    }
   }
   @media only screen and (max-width : 1224px) {
     h1 {
