@@ -1,26 +1,18 @@
-<div class="well">
-<h2>Portfolio</h2>
-<div class="portfolio">
-	<h5 class="portfolio-header"> Web Development </h5>
-	<div class="portfolio-item" ng-repeat="item in work" ng-show="item.category=='web'">
-	<a href="/portfolio/{{item.slug}}">
-	<h5>{{item.name}}</h5>
-	<img class="pull-left shadow" src="/img/portfolio/{{item.images[0]}}"/>
-	<div class="clearfix"></div>
-	<p> </p>
-	</a>
+<div class="well portfolio-item" ng-repeat="item in work">
+	<h2>{{item.name}}</h2>
+	<div class="portfolio-description">
+	<p ng-bind-html="item.description"></p>
+	</div>
+	<div class="portfolio-showcase">
+	<div class="bigimg-container">
+	<img class="bigimg padded" ng-src="/img/portfolio/{{item.selectedImage}}"/>
+	</div>
+	<br>
+	<div class="thumbnails">
+	<div class="thumbnail-container" ng-repeat="img in item.images track by $index">
+		<img src="/img/portfolio/{{img}}" ng-click="selectImage(item, img)">
+	</div>
+	</div>
 	</div>
 	<div class="clearfix"></div>
-</div>
-<div class="portfolio">
-	<h5 class="portfolio-header"> Game Development </h5>
-	<div class="portfolio-item" ng-repeat="item in work" ng-show="item.category=='game'">
-	<a href="/portfolio/{{item.slug}}">
-	<h5>{{item.name}}</h5>
-	<img class="pull-left shadow" src="/img/portfolio/{{item.images[0]}}"/>
-	<div class="clearfix"></div>
-	</a>
-	</div>
-	<div class="clearfix"></div>
-</div>
 </div>
