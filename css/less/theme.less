@@ -47,6 +47,17 @@ body {
     margin-left:0px;
     left:0;
   }
+  z-index:50;
+  &:after {
+    content: '';
+    height:220px;
+    background-repeat:no-repeat;
+    text-align:center;
+    opacity:0.6;
+    margin-top:0px;
+    margin-left:50px;
+    z-index:-1;
+  }
 }
 
 .canvas-background canvas {
@@ -162,7 +173,7 @@ p {
 
 .footer {
   position:fixed;
-  bottom:30px;
+  bottom:0px;
   left:50%;
   height:30px;
   margin-left:-450px;
@@ -171,6 +182,15 @@ p {
   font-size:10px;
   padding-top: 5px;
   color:#333;
+  text-align:center;
+}
+.footer-image {
+  background:url("/img/footer.png");
+  background-repeat:no-repeat;
+  margin:0 auto;
+  margin-top:-200px;
+  width:477px;
+  height:161px;
 }
 
 .gray {

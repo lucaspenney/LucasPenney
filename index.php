@@ -42,7 +42,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
     <div class="navbar" role="navigation">
       <div class="wrapper">
         <div class="half pull-left">
-          <a class="site-title" href="/">Lucas Penney</a>
+          <a class="site-title" href="/about">Lucas Penney</a>
         </div>
         <div class="half pull-right text-centered">
           <ul class="navigation-links pull-left">
@@ -52,10 +52,10 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
       </div>
     </div>
 
-
     <ng-view class="container-fluid content" ng-class="viewAnimation"></ng-view>
 
     <div class='footer' ng-controller="footerController">
+      <div class="footer-image"></div>
         &copy; 2015 Lucas Penney All Rights Reserved
     </div>
     <?php if (ENVIRONMENT == "development"): ?>
