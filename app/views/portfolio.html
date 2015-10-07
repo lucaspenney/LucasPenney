@@ -3,6 +3,7 @@
 	<div class="portfolio-description">
 	<p ng-bind-html="item.description"></p>
 	</div>
+
 	<div class="portfolio-showcase">
 	<div class="bigimg-container">
 	<table>
@@ -11,11 +12,11 @@
 	</td></tr>
 	</table>
 	</div>
-	<br>
+	</div>
+
 	<div class="thumbnails">
 	<div class="thumbnail-container" ng-repeat="img in item.images track by $index">
 		<img src="/img/portfolio/{{img}}" ng-click="selectImage(item, img)">
-	</div>
 	</div>
 	</div>
 	<div class="clearfix"></div>
