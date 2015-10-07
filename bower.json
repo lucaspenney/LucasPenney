@@ -26,7 +26,8 @@
     "threejs": "*",
     "lodash": "~3.9.3",
     "bootstrap-material-design": "~0.3.0",
-    "angular-material": "~0.10.0"
+    "angular-material": "~0.10.0",
+    "angular-ripple": "*"
   },
   "resolutions": {
     "bootstrap": "^3.2.0",
