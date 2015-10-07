@@ -53,6 +53,7 @@ module.exports = function(grunt) {
 						'bower_components/remarkable/dist/remarkable.js',
 						'bower_components/threejs/build/three.js',
 						'bower_components/lodash/lodash.js',
+                        'bower_components/angular-ripple/angular-ripple.js',
 						'app/app.js',
 					]
 				},

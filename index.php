@@ -46,7 +46,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
         </div>
         <div class="half pull-right text-centered">
           <ul class="navigation-links pull-left">
-            <a href="{{item.link}}" ng-repeat="item in navLinks"><li><i class="fa fa-fw smalltext" ng-class="item.icon"></i> {{item.name}}</li></a>
+            <a href="{{item.link}}" ng-repeat="item in navLinks"><li angular-ripple><i class="fa fa-fw smalltext" ng-class="item.icon"></i> {{item.name}}</li></a>
           </ul>
         </div>
       </div>
@@ -56,7 +56,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
 
     <div class='footer' ng-controller="footerController">
       <div class="footer-image"></div>
-        &copy; 2015 Lucas Penney All Rights Reserved
+        &copy; 2015 Lucas Penney Some Rights Reserved Probably
     </div>
     <?php if (ENVIRONMENT == "development"): ?>
       <script src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -66,6 +66,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
       <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
       <script src="/bower_components/angular-aria/angular-aria.js"></script>
       <script src="/bower_components/angular-material/angular-material.js"></script>
+      <script src="/bower_components/angular-ripple/angular-ripple.js"></script>
       <script src="/bower_components/threejs/build/three.js"></script>
       <script src="/bower_components/lodash/lodash.js"></script>
       <script src="/app/app.js?v=<?php echo $v?>"></script>
