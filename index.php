@@ -42,7 +42,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
     <div class="navbar" role="navigation">
       <div class="wrapper">
         <div class="half pull-left">
-          <a class="site-title" href="/about">Lucas Penney</a>
+          <a class="site-title" href="/about" angular-ripple>Lucas Penney</a>
         </div>
         <div class="half pull-right text-centered">
           <ul class="navigation-links pull-left">
