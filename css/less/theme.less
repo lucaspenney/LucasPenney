@@ -358,12 +358,13 @@ input, option, textarea {
 }
 .thumbnails {
   width:100%;
+  text-align:center;
 }
 .thumbnail-container {
-  width:15%;
+  width:20%;
   text-align:center;
-  margin:5%;
-  float:left;
+  margin:2%;
+  display:inline-block;
   img {
     width:100%;
     cursor:pointer;
@@ -372,21 +373,30 @@ input, option, textarea {
     width:15%;
   }
   vertical-align: middle;
+  .image-shadow;
 }
 
+.image-shadow {
+  box-shadow:0px 0px 10px #111;
+}
 .portfolio-showcase {
   padding:30px;
   text-align:center;
   width:50%;
   margin-top:-60px;
   float:right;
-  .bigimg {
-    width:100%;
-    max-width:500px;
-  }
   .bigimg-container {
-    position:relative;
     text-align:center;
+    td {
+      width:400px;
+      height:350px;
+      vertical-align: middle;
+      text-align: center;
+      img {
+        width:100%;
+        .image-shadow;
+      }
+    }
   }
   @media only screen and (max-width : 1224px) {
     h1 {
