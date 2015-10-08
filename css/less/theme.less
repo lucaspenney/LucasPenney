@@ -9,7 +9,7 @@
 @content-font-color: #000;
 @link-font-color:#000 - #333;
 
-/* Alternate Color Scheme */
+@mobile-break: 880px;
 
 html {
   overflow-y: scroll;
@@ -120,12 +120,11 @@ body {
     display:block;
     text-decoration:none;
     font-weight:500;
-    @media only screen and (max-width : 1224px) {
+    @media only screen and (max-width: @mobile-break) {
       padding:0;
       position:relative;
-      left:50%;
-      margin-left:-110px;
-      text-align:center;
+      width:100%;
+      text-align:center;        
     }
   }
   .navigation-links {
@@ -195,6 +194,11 @@ p {
   padding-top: 5px;
   color:#333;
   text-align:center;
+  @media screen and (max-width: @mobile-break) {
+    width:100%;
+    margin-left:0;
+    left:0;
+  }
 }
 .footer-image {
   background:url("/img/footer.png");
@@ -203,6 +207,12 @@ p {
   margin-top:-200px;
   width:477px;
   height:161px;
+  @media only screen and (max-width: @mobile-break) {
+    width:100%;
+    background-size:100%;
+    margin-top:-180px;
+    height:130px;
+  }
 }
 
 .gray {
@@ -361,13 +371,13 @@ input, option, textarea {
     }
   }
 }
-.portfolio-description {
-  text-align:left;
-}
 .thumbnails {
   width:50%;
   float:left;
   text-align:center;
+  @media only screen and (max-width: @mobile-break) {
+    width:100%;
+  }
 }
 .thumbnail-container {
   width:20%;
@@ -409,6 +419,10 @@ input, option, textarea {
       height:375px;
       vertical-align: middle;
       text-align: center;
+      @media only screen and (max-width: @mobile-break) {
+        width:100%;
+        height:auto;
+      }
       img {
         width:100%;
         .image-shadow;
@@ -434,6 +448,7 @@ input, option, textarea {
   }
 }
 .portfolio-description {
+  text-align:left;
   width:50%;
   float:left;
   padding:20px;
@@ -443,10 +458,12 @@ input, option, textarea {
     font-size:100%;
   }
   margin-top:20px;
-  @media only screen and (max-width : 1224px) {
+  @media only screen and (max-width: @mobile-break) {
     margin-top:-20px;
-    margin-bottom:20px;
+    margin-bottom:40px;
     font-size:100%;
+    width:100%;
+    height:auto;
   }
 }
 
@@ -484,8 +501,9 @@ input, option, textarea {
   &:hover {
     opacity:0.7;
   }
-  @media only screen and (max-width : 1224px) {
-    max-width:12%;
+  @media only screen and (max-width: @mobile-break) {
+    max-width:15%;
+    margin-left:0px;
   }
 }
 
@@ -496,8 +514,12 @@ input, option, textarea {
 }
 
 .resume {
-  @media only screen and (max-width : 1224px) {
-    padding-left:10%;
+  @media only screen and (max-width: @mobile-break) {
+    width:100%;
+    font-size:80%;
+    ul {
+      padding-left:15%;
+    }
   }
   h4 {
     margin-top:20px;
@@ -506,12 +528,22 @@ input, option, textarea {
     width:50%;
     padding-right:15%;
     float:left;
+    @media only screen and (max-width: @mobile-break) {
+      width:100%;
+      padding-left:0;
+      padding-right:0;
+    }
   }
   .right-section {
     width:50%;
     padding-right:10%;
     padding-left:5%;
     float:right;
+    @media only screen and (max-width: @mobile-break) {
+      width:100%;
+      padding-left:0;
+      padding-right:0;
+    }
   }
 }
 
