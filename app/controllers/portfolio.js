@@ -52,3 +52,24 @@ app.controller("portfolioController", function($scope, $route, $routeParams, $lo
 		item.selectedImage = img;
 	};
 });
+
+app.directive('animateImageChange', function($timeout) {
+	return {
+		restrict: 'A',
+		link: function($scope, $element, attrs) {
+			$timeout(function() {
+				$element.removeClass("pop-in");
+			}, 500);
+			$element.on('load', function() {
+				if (!$scope.firstLoad) {
+					$scope.firstLoad = true;
+					return;
+				}
+				$element.addClass("pop-out");
+				$timeout(function() {
+					$element.removeClass("pop-out");
+				}, 250);
+			});
+		}
+	}
+})
