@@ -123,15 +123,38 @@ body {
     @media only screen and (max-width: @mobile-break) {
       padding:0;
       position:relative;
-      width:100%;
-      text-align:center;        
+      width:70%;
+      margin-left:5%;
+      padding-top:0px;
+      text-align:center;
+      display:inline-block;
     }
+  }
+  .hamburger {
+    display:none;
+    @media only screen and (max-width : @mobile-break) {
+      display:inline-block;
+    }
+    border:1px solid #AAA;
+    border-radius:4px;
+    margin-right:3%;
+    margin-top:1%;
+    padding:1px 4px;
+    float:right;
   }
   .navigation-links {
     margin:0;
     padding:0;
     list-style:none;
     height:100%;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    overflow:hidden;
+    @media only screen and (max-width : @mobile-break) {
+      height:0;
+    }
     li {
       height:95%;
       float:left;
@@ -144,6 +167,9 @@ body {
       -moz-transition: all 0.6s ease;
       -o-transition: all 0.6s ease;
       transition: all 0.6s ease;
+      @media only screen and (max-width : @mobile-break) {
+        height:auto;
+      }
     }
     li:hover {
       opacity:0.5;
