@@ -192,7 +192,7 @@ h1,h2,h3,h4,h5,h6 {
 h2 {
   margin: 30px 0;
   @media only screen and (max-width : 1224px) {
-    padding-left:10%;
+    padding-left:0;
   }
 }
 a {
@@ -377,6 +377,14 @@ input, option, textarea {
   background: @secondary - #111;
 }
 
+.about-page {
+  @media only screen and (max-width: @mobile-break) {
+    p {
+      margin:4% 0;
+    }
+  }
+}
+
 .portfolio-back {
   width:350px;
   text-align:center;
@@ -415,7 +423,7 @@ input, option, textarea {
     cursor:pointer;
   }
   @media only screen and (max-width : 1224px) {
-    width:15%;
+    width:20%;
   }
   &:hover {
     -webkit-transition: transform 0.2s ease;
@@ -456,6 +464,7 @@ input, option, textarea {
     }
   }
   @media only screen and (max-width : 1224px) {
+    padding:30px 0;
     h1 {
       padding:3%;
       padding-bottom:0;
@@ -482,6 +491,8 @@ input, option, textarea {
   p {
     font-style:italic;
     font-size:100%;
+    padding:0;
+    margin:0;
   }
   margin-top:20px;
   @media only screen and (max-width: @mobile-break) {
@@ -490,6 +501,7 @@ input, option, textarea {
     font-size:100%;
     width:100%;
     height:auto;
+    padding:20px 0;
   }
 }
 
@@ -503,15 +515,8 @@ input, option, textarea {
   margin-bottom:30px !important;
 }
 .portfolio-header {
-  color:@content-font-color;
-  border-bottom: 1px solid @secondary + #222;
-  font-size:85%;
-  padding-bottom:10px;
-  margin-bottom:25px;
-  @media only screen and (max-width : 1224px) {
-    border-bottom:none;
-    font-size:100%;
-    text-align:center;
+  @media only screen and (max-width: @mobile-break) {
+    padding-left:0;
   }
 }
 
