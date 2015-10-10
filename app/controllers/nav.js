@@ -1,5 +1,4 @@
-app.controller("navController", function($scope, $route, $location, $http, $timeout) {
-
+app.controller("navController", function($scope, $route, $location, $http, $timeout, preloadService, portfolioService) {
 	$scope.viewAnimation = 'view-animate';
 
 	$scope.navLinks = [{
@@ -49,5 +48,11 @@ app.controller("navController", function($scope, $route, $location, $http, $time
 				$scope.menuStyle.height = "0px";
 			}, 300);
 		}
+	}
+
+	//Preload the first set of portfolio images
+	var portfolio = portfolioService.getPortfolio();
+	for (var i = 0; i < portfolio[0].images.length; i++) {
+		preloadService.preloadImage("/img/portfolio/" + portfolio[0].images[i]);
 	}
 });
