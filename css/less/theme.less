@@ -44,11 +44,6 @@ body {
   position:absolute;
   margin-left:-480px;
   left:50%;
-  @media only screen and (max-width : 1224px) {
-    width:100%;
-    margin-left:0px;
-    left:0;
-  }
   margin-bottom:180px;
   z-index:-1;
   &:after {
@@ -61,6 +56,15 @@ body {
     margin-top:0px;
     margin-left:50px;
     z-index:50;
+  }
+  @media only screen and (max-width : @mobile-break) {
+    width:100%;
+    margin-left:0px;
+    left:0;
+    &:after {
+      height:0px;
+      margin-bottom:20px;
+    }
   }
   transition: height 0.5s linear;
 }
@@ -237,7 +241,11 @@ p {
     width:100%;
     background-size:100%;
     margin-top:-180px;
-    height:130px;
+    height:50px;
+    background:none;
+  }
+  @media only screen and (max-height: 750px) {
+    background:none;
   }
 }
 
