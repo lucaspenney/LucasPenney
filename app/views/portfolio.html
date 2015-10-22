@@ -1,5 +1,5 @@
 <div class="well portfolio-item" ng-repeat="item in work">
-	<h2>{{item.name}}</h2>
+	<h2 class="portfolio-header">{{item.name}}</h2>
 	<div class="portfolio-description">
 	<p ng-bind-html="item.description"></p>
 	</div>
@@ -8,7 +8,7 @@
 	<div class="bigimg-container">
 	<table>
 	<tr><td>
-	<img ng-src="/img/portfolio/{{item.selectedImage}}"/>
+	<img class="pop-in" ng-src="/img/portfolio/{{item.selectedImage}}" animate-image-change/>
 	</td></tr>
 	</table>
 	</div>

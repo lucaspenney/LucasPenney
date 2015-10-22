@@ -42,11 +42,12 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
     <div class="navbar" role="navigation">
       <div class="wrapper">
         <div class="half pull-left">
-          <a class="site-title" href="/about">Lucas Penney</a>
+          <a class="site-title" href="/about" angular-ripple>Lucas Penney </a>
+          <a ng-click="toggleMenu()" href="#" class="hamburger"><i class="fa fa-bars fa-2x"></i></a>
         </div>
         <div class="half pull-right text-centered">
-          <ul class="navigation-links pull-left">
-            <a href="{{item.link}}" ng-repeat="item in navLinks"><li angular-ripple><i class="fa fa-fw smalltext" ng-class="item.icon"></i> {{item.name}}</li></a>
+          <ul ng-style="menuStyle" class="navigation-links pull-left">
+            <a ng-click="closeMenu()" href="{{item.link}}" ng-repeat="item in navLinks"><li angular-ripple><i class="fa fa-fw smalltext" ng-class="item.icon"></i> {{item.name}}</li></a>
           </ul>
         </div>
       </div>

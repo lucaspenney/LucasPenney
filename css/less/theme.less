@@ -9,7 +9,7 @@
 @content-font-color: #000;
 @link-font-color:#000 - #333;
 
-/* Alternate Color Scheme */
+@mobile-break: 880px;
 
 html {
   overflow-y: scroll;
@@ -62,6 +62,7 @@ body {
     margin-left:50px;
     z-index:50;
   }
+  transition: height 0.5s linear;
 }
 
 .canvas-background canvas {
@@ -77,10 +78,10 @@ body {
 /* Navigation */
 
 .navbar {
-  box-shadow: 0px 2px 8px #BBB;
+  //box-shadow: 0px 2px 8px #BBB;
+  border-bottom: 1px solid #DDD;
   color:@nav-font-color;
   background-color:@primary;
-  border: none;
   height:80px;
   padding:0;
   font-weight:200;
@@ -112,27 +113,50 @@ body {
     color:@nav-font-color + #666;
     padding:20px;
     font-size:190%;
-    margin-top:-6px;
+    margin-top:0px;
     padding-top:23px;
-    width:300px;
+    height:100%;
+    width:215px;
     display:block;
     text-decoration:none;
     font-weight:500;
-    @media only screen and (max-width : 1224px) {
+    @media only screen and (max-width: @mobile-break) {
       padding:0;
       position:relative;
-      left:50%;
-      margin-left:-110px;
+      width:70%;
+      margin-left:5%;
+      padding-top:0px;
       text-align:center;
+      display:inline-block;
     }
+  }
+  .hamburger {
+    display:none;
+    @media only screen and (max-width : @mobile-break) {
+      display:inline-block;
+    }
+    border:1px solid #AAA;
+    border-radius:4px;
+    margin-right:3%;
+    padding:1px 4px;
+    padding-top:3px;
+    float:right;
   }
   .navigation-links {
     margin:0;
     padding:0;
     list-style:none;
     height:100%;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    overflow:hidden;
+    @media only screen and (max-width : @mobile-break) {
+      height:0;
+    }
     li {
-      height:90%;
+      height:95%;
       float:left;
       padding:20px;
       padding-top:25px;
@@ -143,6 +167,9 @@ body {
       -moz-transition: all 0.6s ease;
       -o-transition: all 0.6s ease;
       transition: all 0.6s ease;
+      @media only screen and (max-width : @mobile-break) {
+        height:auto;
+      }
     }
     li:hover {
       opacity:0.5;
@@ -165,7 +192,7 @@ h1,h2,h3,h4,h5,h6 {
 h2 {
   margin: 30px 0;
   @media only screen and (max-width : 1224px) {
-    padding-left:10%;
+    padding-left:0;
   }
 }
 a {
@@ -193,6 +220,11 @@ p {
   padding-top: 5px;
   color:#333;
   text-align:center;
+  @media screen and (max-width: @mobile-break) {
+    width:100%;
+    margin-left:0;
+    left:0;
+  }
 }
 .footer-image {
   background:url("/img/footer.png");
@@ -201,6 +233,12 @@ p {
   margin-top:-200px;
   width:477px;
   height:161px;
+  @media only screen and (max-width: @mobile-break) {
+    width:100%;
+    background-size:100%;
+    margin-top:-180px;
+    height:130px;
+  }
 }
 
 .gray {
@@ -339,6 +377,17 @@ input, option, textarea {
   background: @secondary - #111;
 }
 
+.about-page {
+  p {
+    padding-bottom:2%;
+  }
+  @media only screen and (max-width: @mobile-break) {
+    p {
+      margin:4% 0;
+    }
+  }
+}
+
 .portfolio-back {
   width:350px;
   text-align:center;
@@ -359,13 +408,13 @@ input, option, textarea {
     }
   }
 }
-.portfolio-description {
-  text-align:left;
-}
 .thumbnails {
   width:50%;
   float:left;
   text-align:center;
+  @media only screen and (max-width: @mobile-break) {
+    width:100%;
+  }
 }
 .thumbnail-container {
   width:20%;
@@ -377,7 +426,14 @@ input, option, textarea {
     cursor:pointer;
   }
   @media only screen and (max-width : 1224px) {
-    width:15%;
+    width:20%;
+  }
+  &:hover {
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transform: scale(0.95);
   }
   vertical-align: middle;
   .image-shadow;
@@ -400,6 +456,10 @@ input, option, textarea {
       height:375px;
       vertical-align: middle;
       text-align: center;
+      @media only screen and (max-width: @mobile-break) {
+        width:100%;
+        height:auto;
+      }
       img {
         width:100%;
         .image-shadow;
@@ -407,6 +467,7 @@ input, option, textarea {
     }
   }
   @media only screen and (max-width : 1224px) {
+    padding:30px 0;
     h1 {
       padding:3%;
       padding-bottom:0;
@@ -425,6 +486,7 @@ input, option, textarea {
   }
 }
 .portfolio-description {
+  text-align:left;
   width:50%;
   float:left;
   padding:20px;
@@ -432,12 +494,17 @@ input, option, textarea {
   p {
     font-style:italic;
     font-size:100%;
+    padding:0;
+    margin:0;
   }
   margin-top:20px;
-  @media only screen and (max-width : 1224px) {
+  @media only screen and (max-width: @mobile-break) {
     margin-top:-20px;
-    margin-bottom:20px;
+    margin-bottom:40px;
     font-size:100%;
+    width:100%;
+    height:auto;
+    padding:20px 0;
   }
 }
 
@@ -451,15 +518,8 @@ input, option, textarea {
   margin-bottom:30px !important;
 }
 .portfolio-header {
-  color:@content-font-color;
-  border-bottom: 1px solid @secondary + #222;
-  font-size:85%;
-  padding-bottom:10px;
-  margin-bottom:25px;
-  @media only screen and (max-width : 1224px) {
-    border-bottom:none;
-    font-size:100%;
-    text-align:center;
+  @media only screen and (max-width: @mobile-break) {
+    padding-left:0;
   }
 }
 
@@ -475,8 +535,9 @@ input, option, textarea {
   &:hover {
     opacity:0.7;
   }
-  @media only screen and (max-width : 1224px) {
-    max-width:12%;
+  @media only screen and (max-width: @mobile-break) {
+    max-width:15%;
+    margin-left:0px;
   }
 }
 
@@ -487,13 +548,49 @@ input, option, textarea {
 }
 
 .resume {
-  @media only screen and (max-width : 1224px) {
-    padding-left:10%;
+  @media only screen and (max-width: @mobile-break) {
+    width:100%;
+    font-size:80%;
+    ul {
+      padding-left:15%;
+    }
   }
   h4 {
     margin-top:20px;
   }
+  .left-section {
+    width:50%;
+    padding-right:15%;
+    float:left;
+    @media only screen and (max-width: @mobile-break) {
+      width:100%;
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+  .right-section {
+    width:50%;
+    padding-right:10%;
+    padding-left:5%;
+    float:right;
+    @media only screen and (max-width: @mobile-break) {
+      width:100%;
+      padding-left:0;
+      padding-right:0;
+    }
+  }
 }
+
+.rating {
+  opacity:0.8;
+  float:right;
+}
+
+.blog-frame {
+  width:100%;
+  height:900px;
+}
+
 .clearfix {
   clear:both;
 }
@@ -503,7 +600,7 @@ code {
   color: @content-font-color - #333;
 }
 [animate-on-change]{
-    -webkit-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
