@@ -15,7 +15,7 @@ app.service('portfolioService', function($http, $location) {
 			}, {
 				name: "Learn Cryptography",
 				category: "web",
-				images: ['learncryptography-1.png', 'learncryptography-2.png', 'learncryptography-3.png'],
+				images: ['learncryptography-1.jpg', 'learncryptography-2.jpg', 'learncryptography-3.jpg', 'learncryptography-4.jpg'],
 				description: "Learn Cryptography is a resource website for those interested in learning about Cryptography. Topics include data encryption, hash functions, Bitcoin, and steganography. You can check it out at <a href='http://learncryptography.com/'>LearnCryptography.com</a>."
 			}, {
 				name: "Freelance Web Design",
@@ -23,15 +23,15 @@ app.service('portfolioService', function($http, $location) {
 				images: ['gentlehat.png', 'komcpc.png', 'bcrealtynews.png', 'gawthropfinancial.png'],
 				description: "Freelance Web Design: 2010-2012"
 			}, {
+				name: "Night of Darkness",
+				category: "game",
+				images: ['nightofdarkness.png', 'nightofdarkness-2.jpg', 'nightofdarkness-3.jpg', 'nightofdarkness-4.jpg'],
+				description: "Night of darkness and it's subsequent sequel were both entries to the One Game A Month challenge. The development time of both the original and follow up was one month long. You can play the completed games on <a href='http://www.kongregate.com/games/GentleHat/night-of-darkness-2'>Kongregate</a>."
+			}, {
 				name: "Inescapable Darkness",
 				category: "game",
 				images: ['inescapabledarkness-1.png', 'inescapabledarkness-2.png', 'inescapabledarkness-3.png'],
 				description: "Inescapable Darkness is a survival mode map for Left 4 Dead created in collaboration with James Morrison (CAPTAINCANADA). You can see screenshots and download at <a href='http://www.l4dmaps.com/details.php?file=20558'>L4DMaps</a>."
-			}, {
-				name: "Night of Darkness",
-				category: "game",
-				images: ['nightofdarkness.png'],
-				description: "Night of darkness and it's subsequent sequel were both entries to the One Game A Month challenge. The development time of both the original and follow up was one month long. You can play the completed games on <a href='http://www.kongregate.com/games/GentleHat/night-of-darkness-2'>Kongregate</a>."
 			}];
 		},
 	};
