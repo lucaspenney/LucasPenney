@@ -19,6 +19,7 @@ app.controller('blogController', function($scope, $http, $route, $routeParams) {
 		}
 	};
 
+	/*
 	if ($scope.posts.length === 0) {
 		$scope.loadBlogPosts(function() {
 			$scope.selectPost($scope.slug);
@@ -26,4 +27,5 @@ app.controller('blogController', function($scope, $http, $route, $routeParams) {
 	} else {
 		$scope.selectPost($scope.slug);
 	}
+	*/
 });
