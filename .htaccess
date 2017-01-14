@@ -7,6 +7,10 @@ RewriteCond %{HTTP_HOST} ^blog\.lucaspenney\.com$
 RewriteCond %{REQUEST_URI} !^/blog/
 RewriteRule (.*)$ /blog/$1 [L]
 
+RewriteCond %{HTTP_HOST} ^games\.lucaspenney\.com$
+RewriteCond %{REQUEST_URI} !^/games/
+RewriteRule (.*)$ /games/$1 [L]
+
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
