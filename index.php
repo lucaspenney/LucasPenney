@@ -57,7 +57,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
 
     <div class='footer' ng-controller="footerController">
       <div class="footer-image"></div>
-        &copy; 2015 Lucas Penney Some Rights Reserved Probably
+        &copy; <?php echo date("Y") ?> Lucas Penney Some Rights Reserved Probably
     </div>
     <?php if (ENVIRONMENT == "development"): ?>
       <script src="/bower_components/jquery/dist/jquery.min.js"></script>
