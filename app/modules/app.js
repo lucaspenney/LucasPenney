@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'ngMaterial', 'angularRipple'], function($routeProvider, $locationProvider, $mdThemingProvider) {
+var app = angular.module('app', ['ngRoute', 'ngSanitize', 'ngAnimate', 'ngMaterial', 'ngRipple'], function($routeProvider, $locationProvider, $mdThemingProvider) {
 	$locationProvider
 		.html5Mode({
 			enabled: true,

@@ -13,11 +13,13 @@ app.controller("navController", function($scope, $route, $location, $http, $time
 		name: "Portfolio",
 		icon: "fa-folder-open",
 		link: "/portfolio"
-	}, {
+	}/*
+	, {
 		name: "Blog",
 		icon: "fa-file-text-o",
 		link: "/blog",
-	}];
+	}*/
+	];
 
 	/*
 	$scope.$on('$routeChangeStart', function(next, current) {
