@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import Nav from './Nav';
+import Footer from './Footer';
 import AboutPage from './AboutPage';
 import ProjectsPage from './ProjectsPage';
 import LinksPage from './LinksPage';
@@ -35,6 +36,7 @@ class App extends React.Component {
 						)}/>
 					</div>
 				</div>
+				<Footer/>
 			</BrowserRouter>
 		</div>;
 	}

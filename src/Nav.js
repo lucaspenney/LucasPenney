@@ -29,7 +29,10 @@ class Nav extends React.Component {
 		}];
 		return <div className="navigation container">
 			{links.map((link, i) => {
-				return <Link key={i} className={"navigation-item " + ((link.href == this.state.currentPath) ? "active" : "")} to={link.href}>
+				return <Link key={i} className={"navigation-item " + ((link.href == this.state.currentPath) ? "active" : "")}
+					to={link.href} onClick={(e) => {
+						if (link.href == this.state.currentPath) e.preventDefault();
+					}}>
 					{link.icon} {link.label}
 				</Link>;
 			})}

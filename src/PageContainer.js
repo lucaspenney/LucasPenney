@@ -8,7 +8,6 @@ export default class PageContainer extends React.Component {
 			<div className="page-container-content">
 				{this.props.children}
 			</div>
-			<Footer/>
 		</div>;
 	}
 }
