@@ -38,10 +38,6 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
 <body class="fade-in">
 	<div id="react-app"></div>
 	<script src="/build/app.js?v=<?php echo $v?>"></script>
-
-	<div class="footer">
-		Copyright &copy; <?php echo date("Y"); ?> Lucas Penney - All Rights Reserved
-	</div>
 </body>
 
 </html>

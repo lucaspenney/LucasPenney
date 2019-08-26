@@ -5,15 +5,21 @@ import PageContainer from './PageContainer';
 export default class ProjectsPage extends React.Component {
 	render() {
 		let projects = [{
-			image: "http://placehold.it/200/200",
+			image: "/assets/images/manastack.png",
 			name: "ManaStack",
-			description: "ManaStack is a digital platform for building and testing Magic: The Gathering decks."
+			description: "ManaStack is a digital platform for building and testing Magic: The Gathering decks. Started in 2014 and has grown to a community of over 100,000 users.",
+			link: <a href="https://manastack.com" target="_blank" rel="noopener noreferrer">View Site</a>
 		}, {
 			image: "/assets/images/apocalypsemod.png",
 			name: "Apocalypse Mod",
 			description: "Apocalypse Mod was a large-scale server side mod for Left 4 Dead. \
 			Features included a new AI director system, new weapon types, lighting and map changes, and more. ",
-			link: <a href="http://apocalypsemod.com"></a>
+			link: <a href="http://apocalypsemod.com" target="_blank" rel="noopener noreferrer">View Site</a>
+		}, {
+			image: "/assets/images/games.png",
+			name: "Game Projects",
+			description: "I've made multiple small web games for events such as Ludum Dare. Getting them all up and playable here is a work in progress.",
+			link: <a href="#">This link goes nowhere</a>
 		}];
 		return <PageContainer>
 			<div className="row">

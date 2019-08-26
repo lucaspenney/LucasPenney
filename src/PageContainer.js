@@ -1,9 +1,14 @@
 import React from 'react';
 
-export default class Nav extends React.Component {
+import Footer from './Footer';
+
+export default class PageContainer extends React.Component {
 	render() {
 		return <div className="page-container">
-			{this.props.children}
+			<div className="page-container-content">
+				{this.props.children}
+			</div>
+			<Footer/>
 		</div>;
 	}
 }

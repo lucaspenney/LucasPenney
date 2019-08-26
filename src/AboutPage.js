@@ -13,7 +13,7 @@ export default class AboutPage extends React.Component {
 					<p>Currently writing code at my company <a href="https://lucleus.com/" target="_blank" rel="noopener noreferrer">Lucleus Software</a>.</p>
 				</div>
 				<div className="col-md-4" align="center">
-					<img src="/img/profile3.png"/>
+					<img src="/assets/images/profile.png"/>
 					<p>Lucas Penney
 						<br/><span className="smalltext translucent">({"Artist's Rendering"})</span>
 					</p>

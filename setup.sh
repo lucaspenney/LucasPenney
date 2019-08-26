@@ -1,2 +1,7 @@
 npm install
-ln -s ../node_modules/@fortawesome/fontawesome-free/webfonts/* .
+
+#TODO: Directory check
+mkdir -f ./fonts
+cd ./fonts
+ln -s ./../node_modules/@fortawesome/fontawesome-free/webfonts/* ./
+cd ..
