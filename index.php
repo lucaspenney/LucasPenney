@@ -1,69 +1,47 @@
 <?php
 //Setup environment define
-if ($_SERVER['SERVER_NAME'] == 'lucaspenney.dev') {
-  define('ENVIRONMENT', 'development');
-} else define ('ENVIRONMENT', 'production');
+if ($_SERVER['SERVER_NAME'] == 'lucaspenney.localhost') {
+	define('ENVIRONMENT', 'development');
+} else {
+	define ('ENVIRONMENT', 'production');
+}
 
 session_start();
 //Define version based on git hash
-
 $v = substr(`git rev-parse --verify HEAD`, 0, 6);
 ?>
 <!DOCTYPE html>
-<html lang="en" class="no-js" ng-app="app">
+<html lang="en" class="no-js">
+
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
+	<title>Lucas Penney</title>
+	<meta name="description" content="Lucas Penney">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/main.css">
+	<?php if (ENVIRONMENT == "production"): ?>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8545012-13"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
 
-  <title>Lucas Penney</title>
-  <meta name="description" content="Portfolio website of Lucas Penney">
-  <meta name="viewport" content="width=device-width">
-  <link href='http://fonts.googleapis.com/css?family=Lato:200,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/bower_components/angular-motion/dist/angular-motion.min.css">
-  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
-  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/roboto.min.css">
-  <link rel="stylesheet" href="/bower_components/bootstrap-material-design/dist/css/ripples.css">
-  <link rel="stylesheet" href="/css/main.css">
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-8545012-13']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'UA-8545012-13');
+	</script>
+	<?php endif; ?>
 </head>
-<body class='fade-in' ng-controller="navController">
-  <div class="site-wrapper">
-    <div class="navbar" role="navigation">
-      <div class="wrapper">
-        <div class="half pull-left">
-          <a class="site-title" href="/about">Lucas Penney </a>
-          <a ng-click="toggleMenu()" href="#" class="hamburger"><i class="fa fa-bars fa-2x"></i></a>
-        </div>
-        <div class="half pull-right text-centered">
-          <ul ng-style="menuStyle" class="navigation-links pull-left">
-            <a ng-click="closeMenu()" href="{{item.link}}" ng-repeat="item in navLinks"><li ripple><i class="fa fa-fw smalltext" ng-class="item.icon"></i> {{item.name}}</li></a>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <ng-view class="content" ng-class="viewAnimation"></ng-view>
+<body class="fade-in">
+	<div id="react-app"></div>
+	<script src="/build/app.js?v=<?php echo $v?>"></script>
 
-    <div class='footer' ng-controller="footerController">
-      <div class="footer-image"></div>
-        &copy; <?php echo date("Y") ?> Lucas Penney Some Rights Reserved Probably
-    </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-      <script src="/app/app.js?v=<?php echo $v?>"></script>
-      <script src="/app/templates.js?v=<?php echo $v?>"></script>
-      </div>
-      <!-- <background class="canvas-background"></background> -->
-    </body>
-  </html>
+	<div class="footer">
+		Copyright &copy; <?php echo date("Y"); ?> Lucas Penney - All Rights Reserved
+	</div>
+</body>
+
+</html>

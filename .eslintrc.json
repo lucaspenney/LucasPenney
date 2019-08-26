@@ -1,0 +1,73 @@
+{
+	"plugins": [
+		"standard",
+		"react"
+	],
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended"
+	],
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true,
+		"jquery": true
+	},
+	"rules": {
+		"no-useless-constructor": "off",
+		"no-cond-assign": [
+			"error",
+			"always"
+		],
+		"indent": [
+			"warn",
+			"tab"
+		],
+		"brace-style": [
+			"warn",
+			"1tbs",
+			{
+				"allowSingleLine": false
+			}
+		],
+		"semi": [
+			"warn",
+			"always"
+		],
+		"no-useless-escape": "off",
+		"no-undef": "off",
+		"no-console": "off",
+		"react/prop-types": "off",
+		"space-in-parens": "warn",
+		"no-template-curly-in-string": "error",
+		"no-this-before-super": "error",
+		"no-throw-literal": "error",
+		"no-trailing-spaces": "warn",
+		"no-undef-init": "error",
+		"no-unexpected-multiline": "error",
+		"no-unmodified-loop-condition": "error",
+		"no-unreachable": "error",
+		"no-unsafe-finally": "error",
+		"no-unsafe-negation": "error",
+		"no-use-before-define": [
+			"error",
+			{
+				"functions": true,
+				"classes": false,
+				"variables": true
+			}
+		],
+		"no-unused-vars": "off",
+		"no-useless-call": "error",
+		"no-useless-computed-key": "error",
+		"no-useless-rename": "error",
+		"no-useless-return": "error"
+	}
+}
