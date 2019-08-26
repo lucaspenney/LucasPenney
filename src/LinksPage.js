@@ -17,6 +17,10 @@ export default class LinksPage extends React.Component {
 			label: "GitHub",
 			href: "https://github.com/lucaspenney",
 		}, {
+			icon: <i className="fa-fw fab fa-stack-overflow"></i>,
+			label: "StackOverflow",
+			href: "http://stackoverflow.com/users/841579/lucas-penney",
+		}, {
 			icon: <i className="fa-fw fab fa-steam"></i>,
 			label: "Steam",
 			href: "http://steamcommunity.com/id/Luke-P",
