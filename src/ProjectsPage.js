@@ -33,6 +33,7 @@ export default class ProjectsPage extends React.Component {
 						</div>
 					</div>;
 				})}
+
 			</div>
 		</PageContainer>;
 	}
