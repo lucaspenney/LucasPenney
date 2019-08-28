@@ -19,7 +19,7 @@ $v = substr(`git rev-parse --verify HEAD`, 0, 6);
 	<meta name="description" content="Lucas Penney">
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/main.css?v=<?php echo $v?>">
 	<?php if (ENVIRONMENT == "production"): ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8545012-13"></script>
