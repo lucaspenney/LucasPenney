@@ -36,7 +36,7 @@
     "grunt-angular-templates": "~0.5.7",
     "grunt-contrib-uglify": "~0.9.1",
     "grunt-text-replace": "~0.4.0",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.19",
     "ng-ripple": "^1.0.3",
     "remarkable": "^1.7.1",
     "three.js": "^0.77.1"
